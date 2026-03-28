@@ -2085,3 +2085,110 @@ dateElem.textContent = `Tip for ${today.toLocaleDateString('en-US', options)}`;
 <link rel="alternate" hreflang="pt" href="https://www.awin1.com/cread.php?awinmid=6378&awinaffid=1166692&lang=pt" />
 <link rel="alternate" hreflang="it" href="https://www.awin1.com/cread.php?awinmid=6378&awinaffid=1166692&lang=it" />
 <link rel="alternate" hreflang="x-default" href="https://www.awin1.com/cread.php?awinmid=6378&awinaffid=1166692" />
+<!-- STICKY CTA BAR -->
+<div id="sticky-cta" class="sticky-cta">
+  <p>Ready to get started with Wondershare? <a href="https://www.awin1.com/cread.php?awinmid=6378&awinaffid=1166692" class="cta">Start Now & Get the Best Deal!</a></p>
+</div>
+
+<style>
+/* Sticky CTA styling */
+.sticky-cta {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: #2ecc71;
+  color: #fff;
+  text-align: center;
+  padding: 15px;
+  font-size: 18px;
+  z-index: 9999;
+  box-shadow: 0 -2px 8px rgba(0,0,0,0.2);
+}
+.sticky-cta a.cta {
+  color: #fff;
+  font-weight: bold;
+  text-decoration: none;
+  padding: 8px 20px;
+  background-color: #27ae60;
+  border-radius: 4px;
+  margin-left: 10px;
+}
+.sticky-cta a.cta:hover {
+  background-color: #1e8449;
+}
+</style>
+
+<!-- EXIT-INTENT POPUP -->
+<div id="exit-popup" class="exit-popup" style="display:none;">
+  <div class="exit-popup-content">
+    <span class="exit-close" id="exit-close">&times;</span>
+    <h2>Wait! Don’t Miss Out</h2>
+    <p>Join 50,000+ users who trust Wondershare tools. Start your free trial now!</p>
+    <a href="https://www.awin1.com/cread.php?awinmid=6378&awinaffid=1166692" class="cta">Get Instant Access</a>
+  </div>
+</div>
+
+<style>
+/* Exit popup styling */
+.exit-popup {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(0,0,0,0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 10000;
+}
+.exit-popup-content {
+  background: #fff;
+  padding: 30px;
+  text-align: center;
+  border-radius: 8px;
+  max-width: 400px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+}
+.exit-popup-content h2 {
+  margin-top: 0;
+  color: #27ae60;
+}
+.exit-popup-content a.cta {
+  display: inline-block;
+  margin-top: 15px;
+  background-color: #27ae60;
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 4px;
+  font-weight: bold;
+  text-decoration: none;
+}
+.exit-popup-content a.cta:hover {
+  background-color: #1e8449;
+}
+.exit-close {
+  position: absolute;
+  top: 10px; right: 15px;
+  font-size: 24px;
+  cursor: pointer;
+  color: #333;
+}
+</style>
+
+<script>
+// Exit-intent popup logic (shows only once per session)
+(function() {
+  if (!sessionStorage.getItem('exitPopupShown')) {
+    document.addEventListener('mouseout', function(e) {
+      if (e.clientY < 5) {
+        document.getElementById('exit-popup').style.display = 'flex';
+        sessionStorage.setItem('exitPopupShown', 'true');
+      }
+    });
+  }
+
+  document.getElementById('exit-close').addEventListener('click', function() {
+    document.getElementById('exit-popup').style.display = 'none';
+  });
+})();
+</script>
