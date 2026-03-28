@@ -3369,3 +3369,129 @@ document.getElementById('current-year').innerText = new Date().getFullYear();
     </div>
   </div>
 </section>
+<!-- MINI-BLOG ARTICLES (200–400 words each) -->
+<section id="mini-articles" class="topic-cluster">
+  <h2>Quick Guides & Mini-Articles</h2>
+
+  <article class="mini-article">
+    <h3>Boost Productivity with Wondershare PDFelement</h3>
+    <p><strong>TL;DR:</strong> Organize, edit, and secure your documents faster than ever using Wondershare PDFelement.</p>
+    <p>Managing PDFs can be frustrating — losing track of edits, signatures, or annotations. Wondershare PDFelement streamlines this process with intuitive tools and secure cloud options. Save time by automating repetitive tasks and reduce stress when collaborating on documents. <a href="https://www.awin1.com/cread.php?awinmid=6378&awinaffid=1166692">Click here to try PDFelement now</a>.</p>
+  </article>
+
+  <article class="mini-article">
+    <h3>Filmora Video Editing Made Simple</h3>
+    <p><strong>TL;DR:</strong> Filmora allows anyone to edit professional-quality videos quickly, without steep learning curves.</p>
+    <p>Whether for work or personal projects, video creation can be time-consuming. Wondershare Filmora offers drag-and-drop editing, prebuilt templates, and AI-powered effects. Transform raw footage into polished videos in minutes. <a href="https://www.awin1.com/cread.php?awinmid=6378&awinaffid=1166692">Start creating videos today</a>.</p>
+  </article>
+
+  <article class="mini-article">
+    <h3>Recover Lost Files Instantly</h3>
+    <p><strong>TL;DR:</strong> Don’t panic over lost files — Recoverit makes data recovery reliable and simple.</p>
+    <p>Accidental deletion, crashes, or formatted drives can be stressful. Recoverit by Wondershare scans devices for lost files and restores them quickly. Trusted by millions worldwide, it’s your safety net for digital data. <a href="https://www.awin1.com/cread.php?awinmid=6378&awinaffid=1166692">Recover files now</a>.</p>
+  </article>
+</section>
+
+<!-- DAILY TIPS ROTATOR -->
+<section id="daily-tips">
+  <h2>Daily Tips</h2>
+  <p id="daily-tip-date"></p>
+  <ul id="daily-tip-list">
+    <li>How to speed up PDF edits with PDFelement?</li>
+    <li>Quickly merge videos in Filmora with drag-and-drop</li>
+    <li>Recover deleted photos from your SD card using Recoverit</li>
+    <li>Convert PDFs to Word without losing formatting</li>
+    <li>Trim and merge video clips for YouTube content in minutes</li>
+  </ul>
+</section>
+
+<script>
+  // Rotate daily tips and show current date
+  const tips = document.querySelectorAll("#daily-tip-list li");
+  const today = new Date();
+  document.getElementById("daily-tip-date").textContent = `Tip for ${today.toLocaleString('en-US', { month: 'long', day: 'numeric', year: 'numeric' })}`;
+
+  let tipIndex = 0;
+  setInterval(() => {
+    tips.forEach((tip, i) => tip.style.display = (i === tipIndex ? 'list-item' : 'none'));
+    tipIndex = (tipIndex + 1) % tips.length;
+  }, 5000);
+</script>
+
+<!-- TESTIMONIALS WITH STAR RATINGS -->
+<section id="testimonials">
+  <h2>What Users Say</h2>
+
+  <div class="testimonial">
+    <img src="images/user1.jpg" alt="User 1" />
+    <p>"PDFelement transformed the way I work — fast, intuitive, and reliable!"</p>
+    <div class="stars">★★★★★</div>
+  </div>
+
+  <div class="testimonial">
+    <img src="images/user2.jpg" alt="User 2" />
+    <p>"Filmora is my go-to for professional video editing without the steep learning curve."</p>
+    <div class="stars">★★★★★</div>
+  </div>
+
+  <div class="testimonial">
+    <img src="images/user3.jpg" alt="User 3" />
+    <p>"Recoverit saved me after I thought all my files were gone. Highly recommended."</p>
+    <div class="stars">★★★★★</div>
+  </div>
+</section>
+
+<!-- MICRO-SECTIONS: COMMON MISTAKES, BEST PRACTICES, MYTHS VS FACTS -->
+<section id="micro-sections">
+  <h2>Common Mistakes & Best Practices</h2>
+
+  <div class="micro-section">
+    <h3>Common Mistakes</h3>
+    <ul>
+      <li>Not backing up files before editing PDFs</li>
+      <li>Using complex video editors that slow down workflow</li>
+      <li>Ignoring corrupted files until it’s too late</li>
+    </ul>
+  </div>
+
+  <div class="micro-section">
+    <h3>Best Practices</h3>
+    <ul>
+      <li>Organize documents in PDFelement folders</li>
+      <li>Trim and export videos in small segments for speed</li>
+      <li>Regularly scan devices with Recoverit for lost files</li>
+    </ul>
+  </div>
+
+  <div class="micro-section">
+    <h3>Myths vs Facts</h3>
+    <ul>
+      <li><strong>Myth:</strong> Data recovery is impossible after deletion. <strong>Fact:</strong> Recoverit can restore most files reliably.</li>
+      <li><strong>Myth:</strong> Advanced video editors are always better. <strong>Fact:</strong> Filmora balances power with usability.</li>
+    </ul>
+  </div>
+</section>
+
+<!-- EXIT-INTENT POPUP -->
+<div id="exit-popup" class="popup">
+  <div class="popup-content">
+    <h2>Wait! Don’t Leave Without Trying Wondershare</h2>
+    <p>Start boosting your productivity today. Safe, trusted, and used by millions worldwide.</p>
+    <a href="https://www.awin1.com/cread.php?awinmid=6378&awinaffid=1166692" class="popup-cta">Get Instant Access</a>
+    <button id="popup-close">No Thanks</button>
+  </div>
+</div>
+
+<script>
+  // Exit-intent popup
+  let popupShown = false;
+  document.addEventListener('mouseleave', function(e){
+    if(e.clientY < 0 && !popupShown){
+      document.getElementById('exit-popup').style.display = 'block';
+      popupShown = true;
+    }
+  });
+  document.getElementById('popup-close').addEventListener('click', function(){
+    document.getElementById('exit-popup').style.display = 'none';
+  });
+</script>
