@@ -9,6 +9,7 @@
 <link rel="preconnect" href="https://convert.ctypy.com">
 <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" as="style">
 <style>
+/* Critical CSS: mobile-first, responsive, accessible, minimal */
 html {font-family:'Inter',sans-serif; scroll-behavior:smooth; line-height:1.6; background:#f9f9f9; color:#111;}
 body {margin:0;padding:0;}
 header, nav, main, footer, section, article {display:block;}
@@ -29,9 +30,9 @@ th,td{border:1px solid #ddd;padding:0.5rem;text-align:left;}
 .lazy{opacity:0;transition:opacity 0.3s;}
 .lazy.loaded{opacity:1;}
 .daily-tip{background:#fffae6;padding:1rem;margin:1rem 0;border-left:4px solid #ffc107;}
-.hidden{display:none;}
 </style>
 <script>
+// Minimal JS: lazy loading images, Daily Tip, collapsible FAQ
 document.addEventListener("DOMContentLoaded", function(){
   const imgs = document.querySelectorAll('img.lazy');
   const observer = new IntersectionObserver((entries, obs)=>{
@@ -78,19 +79,8 @@ document.addEventListener("DOMContentLoaded", function(){
     </nav>
   </div>
 </header>
-
-<!-- Hero Slot Machine Section moved right under header -->
-<section class="container">
-  <h2>Play Online Slots Now!</h2>
-  <div class="tldr">
-    Enjoy top-rated online slots with SlotsWise. Get exclusive bonuses and start winning today.
-    <br><a href="https://convert.ctypy.com/aff_c?offer_id=29526&aff_id=21885" class="cta" target="_blank" rel="noopener">Join SlotsWise Now</a>
-  </div>
-  <img class="lazy" data-src="https://via.placeholder.com/1200x400?text=Slots+Machine+Hero" alt="Slots Machine" width="1200" height="400">
-</section>
-
 <main class="container">
-  <!-- TL;DR Section (optional repeat) -->
+  <!-- TL;DR -->
   <section>
     <h2>TL;DR</h2>
     <div class="tldr">
