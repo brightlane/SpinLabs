@@ -3610,3 +3610,109 @@ document.getElementById('current-year').innerText = new Date().getFullYear();
 <!-- PERFORMANCE & SEO OPTIMIZATION -->
 <link rel="preload" href="styles.css" as="style">
 <link rel="preload" href="script.js" as="script">
+<!-- COMPARISON TABLES -->
+<section id="comparison">
+  <h2>Wondershare Tools vs Competitors</h2>
+  <table>
+    <thead>
+      <tr>
+        <th>Feature</th>
+        <th>Wondershare PDFelement</th>
+        <th>Adobe Acrobat</th>
+        <th>Foxit PDF</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>PDF Editing</td>
+        <td>✅ Full editing & annotation</td>
+        <td>✅ Full editing & annotation</td>
+        <td>✅ Limited editing</td>
+      </tr>
+      <tr>
+        <td>Price</td>
+        <td>Affordable</td>
+        <td>Expensive</td>
+        <td>Moderate</td>
+      </tr>
+      <tr>
+        <td>Ease of Use</td>
+        <td>✅ Beginner-friendly</td>
+        <td>⚠️ Steeper learning curve</td>
+        <td>✅ Moderate</td>
+      </tr>
+    </tbody>
+  </table>
+  <a class="cta-button" href="https://www.awin1.com/cread.php?awinmid=6378&awinaffid=1166692">Get PDFelement Now</a>
+</section>
+
+<!-- TESTIMONIALS -->
+<section id="testimonials">
+  <h2>What Our Users Say</h2>
+  <div class="testimonial">
+    <img src="images/user1.jpg" alt="User 1 photo">
+    <p>"PDFelement makes editing PDFs so simple. Highly recommended!"</p>
+    <div class="stars">★★★★★</div>
+  </div>
+  <div class="testimonial">
+    <img src="images/user2.jpg" alt="User 2 photo">
+    <p>"Recoverit saved my important files. Truly lifesaving software."</p>
+    <div class="stars">★★★★★</div>
+  </div>
+  <div class="testimonial">
+    <img src="images/user3.jpg" alt="User 3 photo">
+    <p>"Filmora is perfect for quick and professional videos. Loved it!"</p>
+    <div class="stars">★★★★★</div>
+  </div>
+</section>
+
+<!-- STICKY CTA -->
+<div id="sticky-cta">
+  <a href="https://www.awin1.com/cread.php?awinmid=6378&awinaffid=1166692">Start Using Wondershare Now</a>
+</div>
+
+<!-- EXIT-INTENT POPUP -->
+<div id="exit-popup" style="display:none;">
+  <div class="popup-content">
+    <h3>Don't Leave Without Trying Wondershare!</h3>
+    <p>Join thousands of users who trust Wondershare for PDFs, videos, and file recovery.</p>
+    <a class="cta-button" href="https://www.awin1.com/cread.php?awinmid=6378&awinaffid=1166692">Get Instant Access</a>
+    <span id="close-popup">×</span>
+  </div>
+</div>
+
+<script>
+  // Exit-intent popup logic
+  document.addEventListener("mouseleave", function(e) {
+    if (e.clientY < 0 && !sessionStorage.getItem("exitPopupShown")) {
+      document.getElementById("exit-popup").style.display = "block";
+      sessionStorage.setItem("exitPopupShown", "true");
+    }
+  });
+  document.getElementById("close-popup").onclick = function() {
+    document.getElementById("exit-popup").style.display = "none";
+  };
+</script>
+
+<!-- FOOTER AND LEGAL -->
+<footer>
+  <div class="contact">
+    <p>Business: Wondershare</p>
+    <p>Email: <a href="mailto:support@wondershare.com">support@wondershare.com</a></p>
+  </div>
+  <div class="legal">
+    <a href="/privacy.html">Privacy Policy</a> | 
+    <a href="/terms.html">Terms/Legal Notice</a>
+  </div>
+  <div class="social">
+    <a href="#"><img src="images/facebook.png" alt="Facebook"></a>
+    <a href="#"><img src="images/twitter.png" alt="Twitter"></a>
+    <a href="#"><img src="images/linkedin.png" alt="LinkedIn"></a>
+  </div>
+  <p>&copy; <span id="year"></span> Wondershare. All rights reserved.</p>
+</footer>
+
+<script>
+  // Auto-update year
+  document.getElementById("year").textContent = new Date().getFullYear();
+</script>
