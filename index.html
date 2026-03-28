@@ -3964,3 +3964,58 @@ document.getElementById('current-year').innerText = new Date().getFullYear();
   }
 }
 </script>
+<!-- DAILY TIPS SECTION -->
+<section id="daily-tips">
+  <h2>Daily Tip for <span id="current-date"></span></h2>
+  <ul id="tip-list">
+    <li>How to quickly convert PDFs to Word using PDFelement. <a href="https://www.awin1.com/cread.php?awinmid=6378&awinaffid=1166692" class="cta">Try now</a></li>
+    <li>Recover accidentally deleted files in minutes with Recoverit. <a href="https://www.awin1.com/cread.php?awinmid=6378&awinaffid=1166692" class="cta">Start recovery</a></li>
+    <li>Use Filmora templates to speed up video editing for YouTube. <a href="https://www.awin1.com/cread.php?awinmid=6378&awinaffid=1166692" class="cta">Edit videos now</a></li>
+    <!-- Add 15–20 tips total -->
+  </ul>
+</section>
+
+<script>
+  // Auto-update the date
+  const dateEl = document.getElementById('current-date');
+  const options = { year: 'numeric', month: 'long', day: 'numeric' };
+  dateEl.textContent = new Date().toLocaleDateString('en-US', options);
+</script>
+
+<!-- MULTI-LANGUAGE SUPPORT -->
+<link rel="alternate" hreflang="en" href="https://www.awin1.com/cread.php?awinmid=6378&awinaffid=1166692&lang=en" />
+<link rel="alternate" hreflang="es" href="https://www.awin1.com/cread.php?awinmid=6378&awinaffid=1166692&lang=es" />
+<link rel="alternate" hreflang="fr" href="https://www.awin1.com/cread.php?awinmid=6378&awinaffid=1166692&lang=fr" />
+<link rel="alternate" hreflang="de" href="https://www.awin1.com/cread.php?awinmid=6378&awinaffid=1166692&lang=de" />
+<link rel="alternate" hreflang="zh" href="https://www.awin1.com/cread.php?awinmid=6378&awinaffid=1166692&lang=zh" />
+<link rel="alternate" hreflang="ja" href="https://www.awin1.com/cread.php?awinmid=6378&awinaffid=1166692&lang=ja" />
+<link rel="alternate" hreflang="ru" href="https://www.awin1.com/cread.php?awinmid=6378&awinaffid=1166692&lang=ru" />
+<link rel="alternate" hreflang="ar" href="https://www.awin1.com/cread.php?awinmid=6378&awinaffid=1166692&lang=ar" />
+<link rel="alternate" hreflang="pt" href="https://www.awin1.com/cread.php?awinmid=6378&awinaffid=1166692&lang=pt" />
+<link rel="alternate" hreflang="it" href="https://www.awin1.com/cread.php?awinmid=6378&awinaffid=1166692&lang=it" />
+<link rel="alternate" hreflang="x-default" href="https://www.awin1.com/cread.php?awinmid=6378&awinaffid=1166692" />
+
+<!-- LANGUAGE SWITCHER -->
+<div id="language-switcher">
+  <label for="lang-select">Choose your language:</label>
+  <select id="lang-select">
+    <option value="en">English</option>
+    <option value="es">Español</option>
+    <option value="fr">Français</option>
+    <option value="de">Deutsch</option>
+    <option value="zh">中文</option>
+    <option value="ja">日本語</option>
+    <option value="ru">Русский</option>
+    <option value="ar">العربية</option>
+    <option value="pt">Português</option>
+    <option value="it">Italiano</option>
+  </select>
+</div>
+
+<script>
+  const langSelect = document.getElementById('lang-select');
+  langSelect.addEventListener('change', (e) => {
+    const lang = e.target.value;
+    window.location.href = `https://www.awin1.com/cread.php?awinmid=6378&awinaffid=1166692&lang=${lang}`;
+  });
+</script>
