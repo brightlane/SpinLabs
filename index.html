@@ -1399,3 +1399,132 @@ function closePopup() {
   document.getElementById('exit-popup').style.display = 'none';
 }
 </script>
+<!-- LANGUAGE SWITCHER -->
+<nav class="language-switcher">
+  <label for="lang-select">Choose Language:</label>
+  <select id="lang-select" onchange="switchLanguage(this.value)">
+    <option value="en" selected>English</option>
+    <option value="es">Español</option>
+    <option value="fr">Français</option>
+    <option value="de">Deutsch</option>
+    <option value="zh">中文</option>
+    <option value="ja">日本語</option>
+    <option value="ru">Русский</option>
+    <option value="ar">العربية</option>
+    <option value="pt">Português</option>
+    <option value="it">Italiano</option>
+  </select>
+</nav>
+
+<script>
+const languageContent = {
+  "en": { "ctaText": "Get Instant Access Now", "tip": "Boost your productivity with Wondershare!" },
+  "es": { "ctaText": "Obtén acceso instantáneo ahora", "tip": "¡Mejora tu productividad con Wondershare!" },
+  "fr": { "ctaText": "Obtenez un accès instantané maintenant", "tip": "Améliorez votre productivité avec Wondershare !" },
+  "de": { "ctaText": "Jetzt sofortigen Zugriff erhalten", "tip": "Steigern Sie Ihre Produktivität mit Wondershare!" },
+  "zh": { "ctaText": "立即获取访问权限", "tip": "使用Wondershare提高您的工作效率！" },
+  "ja": { "ctaText": "今すぐアクセス", "tip": "Wondershareで生産性を向上させましょう！" },
+  "ru": { "ctaText": "Получить мгновенный доступ", "tip": "Повышайте продуктивность с Wondershare!" },
+  "ar": { "ctaText": "احصل على الوصول الفوري الآن", "tip": "عزز إنتاجيتك باستخدام Wondershare!" },
+  "pt": { "ctaText": "Obtenha acesso instantâneo agora", "tip": "Aumente sua produtividade com Wondershare!" },
+  "it": { "ctaText": "Ottieni accesso istantaneo ora", "tip": "Aumenta la tua produttività con Wondershare!" }
+};
+
+function switchLanguage(lang) {
+  document.querySelectorAll('.cta').forEach(a => a.textContent = languageContent[lang].ctaText);
+  const tip = document.getElementById('daily-tip');
+  if (tip) tip.textContent = languageContent[lang].tip;
+  document.documentElement.lang = lang;
+}
+</script>
+
+<!-- MICRO-FUNNELS SECTION -->
+<section id="micro-funnels" class="funnels">
+  <h2>Boost Your Productivity with Wondershare Tools</h2>
+  <p class="tl-dr">Struggling with editing, PDF management, or data recovery? Wondershare offers the easiest all-in-one solution.</p>
+
+  <div class="funnel">
+    <h3>Problem: Wasting Hours on Manual Editing?</h3>
+    <p>Editing videos or PDFs manually can take hours, slowing down your workflow.</p>
+    <h4>Solution:</h4>
+    <p>Wondershare tools automate these tasks, saving you time and reducing errors.</p>
+    <a class="cta" href="https://www.awin1.com/cread.php?awinmid=6378&awinaffid=1166692" target="_blank" rel="nofollow" aria-label="Get Instant Access to Wondershare tools">Get Instant Access Now</a>
+    <p class="social-proof">Join 50,000+ users already boosting productivity.</p>
+  </div>
+
+  <div class="funnel">
+    <h3>Problem: Frustrated With PDF Management?</h3>
+    <p>PDF editing, merging, or converting can be confusing and inefficient.</p>
+    <h4>Solution:</h4>
+    <p>Wondershare PDF tools make it simple to manage all your documents with one click.</p>
+    <a class="cta" href="https://www.awin1.com/cread.php?awinmid=6378&awinaffid=1166692" target="_blank" rel="nofollow" aria-label="Start Using Wondershare PDF tools">Start Using Wondershare Now</a>
+    <p class="social-proof">Trusted by professionals worldwide.</p>
+  </div>
+
+  <div class="funnel">
+    <h3>Problem: Lost Files or Data Corruption?</h3>
+    <p>Losing data can be catastrophic, especially without reliable recovery software.</p>
+    <h4>Solution:</h4>
+    <p>Recover deleted or corrupted files effortlessly with Wondershare Data Recovery.</p>
+    <a class="cta" href="https://www.awin1.com/cread.php?awinmid=6378&awinaffid=1166692" target="_blank" rel="nofollow" aria-label="Recover files instantly with Wondershare">Recover Your Files Instantly</a>
+    <p class="social-proof">Millions have restored files safely using Wondershare.</p>
+  </div>
+</section>
+
+<!-- EXIT-INTENT POPUP (CONSOLIDATED) -->
+<div id="exit-popup" class="exit-popup" style="display:none;">
+  <div class="exit-popup-content">
+    <span class="exit-close" id="exit-close" tabindex="0" role="button">&times;</span>
+    <h2>Wait! Don’t Miss Out</h2>
+    <p>Join 50,000+ users who trust Wondershare tools. Start your free trial now!</p>
+    <a href="https://www.awin1.com/cread.php?awinmid=6378&awinaffid=1166692" class="cta" target="_blank" rel="nofollow">Get Instant Access</a>
+  </div>
+</div>
+
+<script>
+const exitPopup = document.getElementById('exit-popup');
+const exitClose = document.getElementById('exit-close');
+
+if (!sessionStorage.getItem('exitPopupShown')) {
+  document.addEventListener('mouseout', function(e) {
+    if (e.clientY < 5) {
+      exitPopup.style.display = 'flex';
+      sessionStorage.setItem('exitPopupShown', 'true');
+    }
+  });
+}
+
+exitClose.addEventListener('click', () => exitPopup.style.display = 'none');
+exitClose.addEventListener('keypress', (e) => { if(e.key === "Enter") exitPopup.style.display = 'none'; });
+</script>
+
+<!-- STICKY CTA BAR -->
+<div id="sticky-cta" class="sticky-cta">
+  <p>Ready to get started with Wondershare? <a href="https://www.awin1.com/cread.php?awinmid=6378&awinaffid=1166692" class="cta" aria-label="Start now with Wondershare">Start Now & Get the Best Deal!</a></p>
+</div>
+
+<style>
+/* Exit popup styling */
+.exit-popup {
+  position: fixed;
+  top:0; left:0;
+  width:100%; height:100%;
+  background: rgba(0,0,0,0.6);
+  display:flex; justify-content:center; align-items:center;
+  z-index:10000;
+}
+.exit-popup-content {
+  background:#fff; padding:30px; text-align:center;
+  border-radius:8px; max-width:400px;
+  box-shadow:0 4px 12px rgba(0,0,0,0.3);
+  position: relative;
+}
+.exit-popup-content h2 { color:#27ae60; margin-top:0; }
+.exit-popup-content a.cta { display:inline-block; margin-top:15px; background:#27ae60; color:#fff; padding:10px 20px; border-radius:4px; font-weight:bold; text-decoration:none; }
+.exit-popup-content a.cta:hover { background:#1e8449; }
+.exit-close { position:absolute; top:10px; right:15px; font-size:24px; cursor:pointer; color:#333; }
+
+.sticky-cta { position: fixed; bottom: 0; left: 0; width: 100%; background-color: #2ecc71; color: #fff; text-align: center; padding: 15px; font-size: 18px; z-index: 9999; box-shadow: 0 -2px 8px rgba(0,0,0,0.2); }
+.sticky-cta a.cta { color:#fff; font-weight:bold; text-decoration:none; padding:8px 20px; background-color:#27ae60; border-radius:4px; margin-left:10px; }
+.sticky-cta a.cta:hover { background-color:#1e8449; }
+</style>
