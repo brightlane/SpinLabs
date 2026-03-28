@@ -1235,3 +1235,70 @@ html[dir="rtl"] .faq dd { margin-left: 0; margin-right: 1rem; }
 
 <!-- PERFORMANCE OPTIMIZATION NOTES -->
 <!-- Fonts preloaded with swap, CSS inline for LCP, JS deferred, images lazy-loaded -->
+<!-- FINAL FOOTER & ANALYTICS -->
+<footer style="background:#1a1a1a;color:#fff;padding:2rem;text-align:center;">
+  <p>&copy; 2026 Slotswise. All rights reserved.</p>
+  <p>
+    <a href="#" style="color:#ff9800;text-decoration:none;margin-right:1rem;">Privacy Policy</a>
+    <a href="#" style="color:#ff9800;text-decoration:none;">Terms of Service</a>
+  </p>
+  <!-- Optional trust badges or partner logos can go here -->
+</footer>
+
+<!-- STICKY CTA SAFETY (avoid duplicate if already present) -->
+<script>
+if(!document.getElementById('stickyCTA')){
+  const cta = document.createElement('a');
+  cta.id='stickyCTA';
+  cta.href='https://convert.ctypy.com/aff_c?offer_id=29526&aff_id=21885';
+  cta.target='_blank';
+  cta.textContent='Claim Bonus';
+  cta.style.cssText='position:fixed;bottom:20px;right:20px;background:#ff9800;color:#fff;padding:0.8rem 1.5rem;border-radius:50px;text-decoration:none;font-weight:bold;box-shadow:0 4px 10px rgba(0,0,0,0.2);z-index:999;';
+  document.body.appendChild(cta);
+}
+</script>
+
+<!-- PERFORMANCE & ENGAGEMENT TRACKING -->
+<script defer>
+(function(){
+  // Scroll Depth Tracking
+  let maxScroll = 0;
+  window.addEventListener('scroll', () => {
+    const scrollPercent = (window.scrollY + window.innerHeight) / document.body.scrollHeight * 100;
+    if(scrollPercent > maxScroll){
+      maxScroll = scrollPercent;
+      console.log('Scroll depth:', Math.floor(maxScroll)+'%'); // Replace with analytics call
+    }
+  });
+
+  // Click Tracking
+  document.addEventListener('click', (e) => {
+    if(e.target.tagName === 'A'){
+      console.log('Link clicked:', e.target.href); // Replace with analytics call
+    }
+  });
+
+  // Dwell Time Tracking
+  let startTime = Date.now();
+  window.addEventListener('beforeunload', () => {
+    const dwellTime = Math.floor((Date.now() - startTime)/1000);
+    console.log('Dwell time (s):', dwellTime); // Replace with analytics call
+  });
+
+  // Lightweight LCP & CLS monitoring
+  if('PerformanceObserver' in window){
+    const po = new PerformanceObserver(list => {
+      list.getEntries().forEach(entry => {
+        if(entry.entryType==='largest-contentful-paint'){
+          console.log('LCP:', entry.startTime);
+        }
+        if(entry.entryType==='layout-shift' && !entry.hadRecentInput){
+          console.log('CLS:', entry.value);
+        }
+      });
+    });
+    po.observe({type: 'largest-contentful-paint', buffered:true});
+    po.observe({type: 'layout-shift', buffered:true});
+  }
+})();
+</script>
