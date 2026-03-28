@@ -2664,3 +2664,110 @@ html[dir="rtl"] .faq dd { margin-left: 0; margin-right: 1rem; }
 
 </main>
 <!-- END: Production-Ready Pillar Article & Multi-Language Modules -->
+<!-- BEGIN: Multi-Language & Responsive Modules -->
+<main id="multiLangContent">
+
+<!-- Language Selector -->
+<nav aria-label="Language selection" style="text-align:center;margin:2rem 0;">
+  <select id="langSelector" aria-label="Select Language">
+    <option value="en" selected>English</option>
+    <option value="es">Español</option>
+    <option value="fr">Français</option>
+    <option value="de">Deutsch</option>
+    <option value="zh">中文</option>
+    <option value="ja">日本語</option>
+    <option value="ru">Русский</option>
+    <option value="ar">العربية</option>
+    <option value="pt">Português</option>
+    <option value="it">Italiano</option>
+  </select>
+</nav>
+
+<!-- Multi-Language Sections -->
+<section class="pillar-section lang-section" data-lang="en" dir="ltr">
+  <h2>English: Problem</h2>
+  <p>Players often miss bonuses due to confusing terms or poor timing. Slotswise simplifies this.</p>
+  <img data-src="https://via.placeholder.com/800x400.webp" alt="Slotswise Bonus Example" class="lazyload" width="800" height="400">
+</section>
+
+<section class="pillar-section lang-section" data-lang="es" dir="ltr">
+  <h2>Español: Problema</h2>
+  <p>Los jugadores a menudo pierden bonos debido a términos confusos o mal momento. Slotswise lo simplifica.</p>
+  <img data-src="https://via.placeholder.com/800x400.webp" alt="Ejemplo de Bono Slotswise" class="lazyload" width="800" height="400">
+</section>
+
+<section class="pillar-section lang-section" data-lang="fr" dir="ltr">
+  <h2>Français: Problème</h2>
+  <p>Les joueurs manquent souvent des bonus à cause de conditions confuses ou d’un mauvais timing. Slotswise simplifie le processus.</p>
+  <img data-src="https://via.placeholder.com/800x400.webp" alt="Exemple Bonus Slotswise" class="lazyload" width="800" height="400">
+</section>
+
+<section class="pillar-section lang-section" data-lang="de" dir="ltr">
+  <h2>Deutsch: Problem</h2>
+  <p>Spieler verpassen oft Boni aufgrund verwirrender Bedingungen oder falscher Timing. Slotswise vereinfacht dies.</p>
+  <img data-src="https://via.placeholder.com/800x400.webp" alt="Slotswise Bonus Beispiel" class="lazyload" width="800" height="400">
+</section>
+
+<section class="pillar-section lang-section" data-lang="zh" dir="ltr">
+  <h2>中文: 问题</h2>
+  <p>玩家经常因为条款复杂或时机不当而错过奖金。Slotswise 简化了流程。</p>
+  <img data-src="https://via.placeholder.com/800x400.webp" alt="Slotswise 奖金示例" class="lazyload" width="800" height="400">
+</section>
+
+<section class="pillar-section lang-section" data-lang="ja" dir="ltr">
+  <h2>日本語: 問題</h2>
+  <p>プレイヤーは、複雑な条件やタイミングの悪さでボーナスを逃すことがあります。Slotswise はこれを簡単にします。</p>
+  <img data-src="https://via.placeholder.com/800x400.webp" alt="Slotswise ボーナス例" class="lazyload" width="800" height="400">
+</section>
+
+<section class="pillar-section lang-section" data-lang="ru" dir="ltr">
+  <h2>Русский: Проблема</h2>
+  <p>Игроки часто пропускают бонусы из-за запутанных условий или неверного времени. Slotswise упрощает процесс.</p>
+  <img data-src="https://via.placeholder.com/800x400.webp" alt="Пример бонуса Slotswise" class="lazyload" width="800" height="400">
+</section>
+
+<section class="pillar-section lang-section" data-lang="ar" dir="rtl">
+  <h2>العربية: المشكلة</h2>
+  <p>غالبًا ما يفوت اللاعبون المكافآت بسبب شروط مربكة أو توقيت غير مناسب. تسهّل Slotswise العملية.</p>
+  <img data-src="https://via.placeholder.com/800x400.webp" alt="مثال على مكافأة Slotswise" class="lazyload" width="800" height="400">
+</section>
+
+<section class="pillar-section lang-section" data-lang="pt" dir="ltr">
+  <h2>Português: Problema</h2>
+  <p>Os jogadores frequentemente perdem bônus devido a termos confusos ou tempo inadequado. Slotswise simplifica o processo.</p>
+  <img data-src="https://via.placeholder.com/800x400.webp" alt="Exemplo de Bônus Slotswise" class="lazyload" width="800" height="400">
+</section>
+
+<section class="pillar-section lang-section" data-lang="it" dir="ltr">
+  <h2>Italiano: Problema</h2>
+  <p>I giocatori spesso perdono i bonus a causa di termini confusi o tempistiche errate. Slotswise semplifica il processo.</p>
+  <img data-src="https://via.placeholder.com/800x400.webp" alt="Esempio Bonus Slotswise" class="lazyload" width="800" height="400">
+</section>
+
+<!-- Lazy Load Script -->
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  // Lazy-load images
+  const lazyImages = document.querySelectorAll('img.lazyload');
+  lazyImages.forEach(img => {
+    const src = img.getAttribute('data-src');
+    if(src) img.setAttribute('src', src);
+  });
+
+  // Language selector
+  const langSelector = document.getElementById('langSelector');
+  const langSections = document.querySelectorAll('.lang-section');
+  langSelector.addEventListener('change', (e) => {
+    const selected = e.target.value;
+    langSections.forEach(sec => {
+      sec.style.display = (sec.dataset.lang === selected) ? 'block' : 'none';
+    });
+  });
+  // Initialize display
+  langSections.forEach(sec => sec.style.display = (sec.dataset.lang === 'en') ? 'block' : 'none');
+});
+</script>
+<style>
+.lang-section {margin:2rem 0;}
+</style>
+<!-- END: Multi-Language & Responsive Modules -->
