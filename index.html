@@ -1545,3 +1545,70 @@ v
   ]
 }
 </script>
+<!-- EXIT-INTENT POPUP -->
+<div id="exit-popup" class="popup">
+  <div class="popup-content">
+    <span class="popup-close" onclick="closePopup()">&times;</span>
+    <h2>Wait! Don’t Miss Out</h2>
+    <p>Start using Wondershare tools today and boost your productivity instantly.</p>
+    <a href="https://www.awin1.com/cread.php?awinmid=6378&awinaffid=1166692" class="cta">Get Instant Access Now</a>
+  </div>
+</div>
+
+<script>
+let popupShown = sessionStorage.getItem('exitPopupShown') || false;
+
+document.addEventListener('mouseout', function(e) {
+  if (!popupShown && e.clientY < 10) {
+    document.getElementById('exit-popup').style.display = 'block';
+    sessionStorage.setItem('exitPopupShown', true);
+    popupShown = true;
+  }
+});
+
+function closePopup() {
+  document.getElementById('exit-popup').style.display = 'none';
+}
+</script>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-top">
+    <p>&copy; <span id="year"></span> Wondershare Tools. All Rights Reserved.</p>
+    <p>
+      <a href="/privacy-policy.html">Privacy Policy</a> | 
+      <a href="/terms.html">Terms & Legal Notice</a> | 
+      <a href="mailto:support@wondershare.com">Contact Support</a>
+    </p>
+    <div class="social-icons">
+      <a href="#"><img src="images/facebook.svg" alt="Facebook"></a>
+      <a href="#"><img src="images/twitter.svg" alt="Twitter"></a>
+      <a href="#"><img src="images/linkedin.svg" alt="LinkedIn"></a>
+    </div>
+  </div>
+</footer>
+
+<script>
+document.getElementById('year').textContent = new Date().getFullYear();
+</script>
+
+<!-- PERFORMANCE OPTIMIZATION -->
+<style>
+/* Critical CSS */
+body {font-family: Arial, sans-serif; line-height:1.6; margin:0; padding:0; color:#333; background:#f9f9f9;}
+header, footer, section {padding:20px; max-width:1200px; margin:auto;}
+.cta {background:#4CAF50; color:white; padding:12px 20px; text-decoration:none; font-weight:bold; border-radius:4px;}
+.cta:hover {background:#45a049;}
+.popup {display:none; position:fixed; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.6); justify-content:center; align-items:center;}
+.popup-content {background:#fff; padding:30px; border-radius:8px; max-width:400px; text-align:center;}
+.popup-close {position:absolute; top:10px; right:20px; font-size:24px; cursor:pointer;}
+.testimonial img {width:50px; height:50px; border-radius:50%; margin-right:10px;}
+</style>
+
+<script>
+/* Lazy-load non-critical images */
+document.addEventListener("DOMContentLoaded", function() {
+  const lazyImages = document.querySelectorAll('img[loading="lazy"]');
+  lazyImages.forEach(img => { img.src = img.dataset.src; });
+});
+</script>
