@@ -2878,3 +2878,62 @@ document.addEventListener('DOMContentLoaded', function() {
 .lang-section {margin:2rem 0;}
 </style>
 <!-- END: Multi-Language & Responsive Modules -->
+<!-- BEGIN: SEO-Optimized Multi-Language Footer -->
+<footer role="contentinfo" style="background:#1a1a1a;color:#fff;padding:3rem 1rem;text-align:center;line-height:1.5;">
+  
+  <!-- Logo / Brand -->
+  <div style="margin-bottom:1rem;">
+    <img src="https://via.placeholder.com/150x50" alt="Slotswise Logo" width="150" height="50" style="max-width:100%;height:auto;">
+  </div>
+
+  <!-- Trust / Compliance Badges -->
+  <div style="margin-bottom:1rem;">
+    <img src="https://via.placeholder.com/50x50?text=SSL" alt="Secure SSL Connection" style="width:50px;height:50px;margin-right:0.5rem;">
+    <img src="https://via.placeholder.com/50x50?text=RNG" alt="Certified Random Number Generator" style="width:50px;height:50px;margin-right:0.5rem;">
+    <img src="https://via.placeholder.com/50x50?text=Age18+" alt="18+ Age Restriction" style="width:50px;height:50px;">
+  </div>
+
+  <!-- Footer Navigation with hreflang links -->
+  <nav aria-label="Footer navigation" style="margin-bottom:1rem;">
+    <a href="/privacy-policy" hreflang="en" style="color:#ff9800;text-decoration:none;margin:0 0.5rem;">Privacy Policy</a>
+    <a href="/terms-of-service" hreflang="en" style="color:#ff9800;text-decoration:none;margin:0 0.5rem;">Terms of Service</a>
+    <a href="/responsible-gaming" hreflang="en" style="color:#ff9800;text-decoration:none;margin:0 0.5rem;">Responsible Gaming</a>
+    <!-- Multi-language links -->
+    <a href="/es/privacy-policy" hreflang="es" style="color:#ff9800;text-decoration:none;margin:0 0.5rem;">Política de Privacidad</a>
+    <a href="/fr/privacy-policy" hreflang="fr" style="color:#ff9800;text-decoration:none;margin:0 0.5rem;">Politique de Confidentialité</a>
+    <!-- Add remaining languages similarly -->
+  </nav>
+
+  <!-- Social Proof / Ratings -->
+  <div style="margin-bottom:1rem;">
+    <span style="color:#ff9800;font-weight:bold;">★★★★★</span>
+    <span>Trusted by 500,000+ Players Worldwide</span>
+  </div>
+
+  <!-- Copyright & Localized Notice -->
+  <p style="font-size:0.9rem;margin-bottom:0.5rem;">&copy; 2026 Slotswise. All rights reserved.</p>
+  <p style="font-size:0.85rem;">
+    <span lang="en">Online slots and gambling are intended for users 18+ only.</span>
+    <span lang="es" style="display:none;">Los juegos de azar en línea están destinados solo a usuarios mayores de 18 años.</span>
+    <span lang="fr" style="display:none;">Les jeux d'argent en ligne sont réservés aux utilisateurs de 18 ans et plus.</span>
+    <!-- Add remaining languages -->
+  </p>
+
+</footer>
+
+<!-- Optional: Footer Language Toggle Script -->
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  const langFooterSpans = document.querySelectorAll('footer span[lang]');
+  const langSelector = document.getElementById('langSelector');
+  if(langSelector){
+    langSelector.addEventListener('change', (e) => {
+      const selected = e.target.value;
+      langFooterSpans.forEach(span => {
+        span.style.display = (span.getAttribute('lang') === selected) ? 'inline' : 'none';
+      });
+    });
+  }
+});
+</script>
+<!-- END: SEO-Optimized Footer -->
