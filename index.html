@@ -1801,3 +1801,106 @@ document.addEventListener('mouseleave', function(e) {
   }
 });
 </script>
+<!-- COMPARISON TABLES -->
+<section id="comparisons" class="comparisons">
+  <h2>Wondershare vs Competitors</h2>
+  <p class="tl-dr">See why Wondershare stands out among other productivity and multimedia tools.</p>
+
+  <table>
+    <thead>
+      <tr>
+        <th>Feature</th>
+        <th>Wondershare</th>
+        <th>Competitor A</th>
+        <th>Competitor B</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Video Editing</td>
+        <td>✅ Professional, intuitive</td>
+        <td>✅ Basic</td>
+        <td>❌ Limited</td>
+      </tr>
+      <tr>
+        <td>PDF Management</td>
+        <td>✅ Merge, edit, convert</td>
+        <td>❌ Only view</td>
+        <td>✅ Edit, limited features</td>
+      </tr>
+      <tr>
+        <td>Data Recovery</td>
+        <td>✅ Deleted & corrupted files</td>
+        <td>❌ Partial</td>
+        <td>❌ Partial</td>
+      </tr>
+      <tr>
+        <td>User-Friendly</td>
+        <td>✅ Beginner & pro friendly</td>
+        <td>✅ Moderate</td>
+        <td>❌ Confusing</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <a class="cta" href="https://www.awin1.com/cread.php?awinmid=6378&awinaffid=1166692">Get Wondershare Today</a>
+</section>
+
+<!-- TESTIMONIALS -->
+<section id="testimonials" class="testimonials">
+  <h2>What Users Are Saying</h2>
+  <div class="testimonial">
+    <img src="images/user1.jpg" alt="Photo of John D." loading="lazy">
+    <p>"Wondershare saved me hours editing my videos! Highly recommend."</p>
+    <p class="stars">★★★★★</p>
+    <p class="user">— John D., Content Creator</p>
+  </div>
+  
+  <div class="testimonial">
+    <img src="images/user2.jpg" alt="Photo of Maria S." loading="lazy">
+    <p>"The PDF tools are so easy to use. Merged and converted files in minutes."</p>
+    <p class="stars">★★★★★</p>
+    <p class="user">— Maria S., Freelancer</p>
+  </div>
+
+  <div class="testimonial">
+    <img src="images/user3.jpg" alt="Photo of Ahmed K." loading="lazy">
+    <p>"Data recovery worked perfectly! Recovered everything I thought was lost."</p>
+    <p class="stars">★★★★★</p>
+    <p class="user">— Ahmed K., IT Professional</p>
+  </div>
+
+  <a class="cta" href="https://www.awin1.com/cread.php?awinmid=6378&awinaffid=1166692">Join Thousands of Satisfied Users</a>
+</section>
+
+<!-- DAILY TIP ROTATOR -->
+<section id="daily-tips" class="daily-tips">
+  <h2>Daily Productivity Tip</h2>
+  <p id="tip-date"></p>
+  <ul id="tip-list">
+    <li>How to quickly merge multiple PDFs in one click.</li>
+    <li>Top keyboard shortcuts for video editing efficiency.</li>
+    <li>Recover deleted files in 3 easy steps.</li>
+    <li>Convert PDFs to Word without losing formatting.</li>
+    <li>Automate repetitive tasks with Wondershare macros.</li>
+    <!-- Add 10–15 more tips -->
+  </ul>
+</section>
+
+<script>
+// Daily tip rotator with date
+const tips = document.querySelectorAll('#tip-list li');
+let tipIndex = 0;
+function rotateTip() {
+  tips.forEach((tip, i) => tip.style.display = i === tipIndex ? 'list-item' : 'none');
+  tipIndex = (tipIndex + 1) % tips.length;
+}
+rotateTip();
+setInterval(rotateTip, 5000); // rotate every 5s
+
+// Show current date
+const dateElem = document.getElementById('tip-date');
+const today = new Date();
+const options = { year: 'numeric', month: 'long', day: 'numeric' };
+dateElem.textContent = `Tip for ${today.toLocaleDateString('en-US', options)}`;
+</script>
