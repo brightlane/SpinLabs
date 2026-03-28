@@ -2546,3 +2546,137 @@ document.getElementById('current-year').innerText = new Date().getFullYear();
     </div>
   </div>
 </section>
+  <!-- TESTIMONIALS -->
+<section id="testimonials">
+  <h2>What Our Users Say</h2>
+  <div class="testimonial">
+    <img src="https://via.placeholder.com/80" alt="User 1 photo">
+    <p>⭐⭐⭐⭐⭐ "This platform transformed my experience — highly recommended!" – Jane D.</p>
+  </div>
+  <div class="testimonial">
+    <img src="https://via.placeholder.com/80" alt="User 2 photo">
+    <p>⭐⭐⭐⭐⭐ "Creating my first project was easy and fun!" – Mark S.</p>
+  </div>
+  <div class="testimonial">
+    <img src="https://via.placeholder.com/80" alt="User 3 photo">
+    <p>⭐⭐⭐⭐⭐ "I got exactly what I needed quickly. Amazing!" – Lisa R.</p>
+  </div>
+</section>
+
+<!-- EXIT-INTENT POPUP -->
+<div id="exit-popup" style="display:none;">
+  <div class="popup-content">
+    <h3>Wait! Don't Leave Empty-Handed</h3>
+    <p>Access Slotwise instantly and enjoy your rewards today.</p>
+    <a href="https://convert.ctypy.com/aff_c?offer_id=29526&aff_id=21885" class="cta">Claim Your Access Now</a>
+    <button id="close-popup">Close</button>
+  </div>
+</div>
+
+<script>
+  // Exit-intent popup logic (once per session)
+  if (!sessionStorage.getItem('exitPopupShown')) {
+    document.addEventListener('mouseout', function(e) {
+      if (!e.toElement && !e.relatedTarget && e.clientY < 10) {
+        document.getElementById('exit-popup').style.display = 'block';
+        sessionStorage.setItem('exitPopupShown', 'true');
+      }
+    });
+  }
+
+  document.getElementById('close-popup').onclick = function() {
+    document.getElementById('exit-popup').style.display = 'none';
+  };
+</script>
+
+<!-- BLOG-STYLE MINI-ARTICLES -->
+<section id="mini-articles">
+  <article>
+    <h3>How to Get Started Quickly</h3>
+    <p><strong>TL;DR:</strong> Slotwise makes it simple to enjoy your favorite games and rewards.</p>
+    <p>Getting started is easy! Sign up, pick your favorite slot games, and start playing immediately. <a href="https://convert.ctypy.com/aff_c?offer_id=29526&aff_id=21885" class="cta">Start playing now</a></p>
+  </article>
+
+  <article>
+    <h3>Boost Your Chances of Winning</h3>
+    <p><strong>TL;DR:</strong> Slotwise offers exciting gameplay with great rewards and bonuses.</p>
+    <p>Experience smooth gameplay with instant access to bonuses and rewards. Perfect for casual and serious players alike. <a href="https://convert.ctypy.com/aff_c?offer_id=29526&aff_id=21885" class="cta">Join and play today</a></p>
+  </article>
+
+  <article>
+    <h3>Enjoy Anytime, Anywhere</h3>
+    <p><strong>TL;DR:</strong> Access Slotwise from desktop or mobile for uninterrupted fun.</p>
+    <p>Play your favorite slots from any device, anywhere. The platform is optimized for all screens. <a href="https://convert.ctypy.com/aff_c?offer_id=29526&aff_id=21885" class="cta">Play now</a></p>
+  </article>
+</section>
+
+<!-- FAQ RICH SNIPPETS -->
+<section id="faq">
+  <h2>Frequently Asked Questions</h2>
+  <div itemscope itemtype="https://schema.org/FAQPage">
+
+    <div itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+      <h3 itemprop="name">How do I sign up?</h3>
+      <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+        <p itemprop="text">Signing up is fast and simple. <a href="https://convert.ctypy.com/aff_c?offer_id=29526&aff_id=21885" class="cta">Click here to register</a></p>
+      </div>
+    </div>
+
+    <div itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+      <h3 itemprop="name">Is it safe to play?</h3>
+      <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+        <p itemprop="text">Yes, Slotwise is secure and reliable for all users. <a href="https://convert.ctypy.com/aff_c?offer_id=29526&aff_id=21885" class="cta">Start playing safely</a></p>
+      </div>
+    </div>
+
+    <div itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+      <h3 itemprop="name">Are there bonuses for new players?</h3>
+      <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+        <p itemprop="text">New players get access to exciting bonuses immediately. <a href="https://convert.ctypy.com/aff_c?offer_id=29526&aff_id=21885" class="cta">Claim your bonus now</a></p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- DAILY TIPS SECTION -->
+<section id="daily-tips">
+  <h2>Daily Tip for <span id="current-date"></span></h2>
+  <ul id="tip-list">
+    <li>Discover the best slot games to maximize fun. <a href="https://convert.ctypy.com/aff_c?offer_id=29526&aff_id=21885" class="cta">Play now</a></li>
+    <li>Check the bonus section daily to boost rewards. <a href="https://convert.ctypy.com/aff_c?offer_id=29526&aff_id=21885" class="cta">Claim bonuses</a></li>
+    <li>Try different game types for variety and excitement. <a href="https://convert.ctypy.com/aff_c?offer_id=29526&aff_id=21885" class="cta">Start exploring</a></li>
+  </ul>
+</section>
+
+<script>
+  // Auto-update the date
+  const dateEl = document.getElementById('current-date');
+  const options = { year: 'numeric', month: 'long', day: 'numeric' };
+  dateEl.textContent = new Date().toLocaleDateString('en-US', options);
+</script>
+
+<!-- STICKY CTA -->
+<div id="sticky-cta">
+  <p>Get access to Slotwise now and enjoy top slot games! <a href="https://convert.ctypy.com/aff_c?offer_id=29526&aff_id=21885" class="cta">Click here to play</a></p>
+</div>
+
+<style>
+  #sticky-cta {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background: #4CAF50;
+    color: #fff;
+    text-align: center;
+    padding: 12px;
+    font-size: 16px;
+    box-shadow: 0 -2px 6px rgba(0,0,0,0.2);
+    z-index: 9999;
+  }
+  #sticky-cta a.cta {
+    color: #fff;
+    font-weight: bold;
+    text-decoration: underline;
+  }
+</style>
