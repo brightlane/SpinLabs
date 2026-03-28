@@ -9,8 +9,8 @@
 <link rel="preconnect" href="https://convert.ctypy.com">
 <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" as="style">
 
-<!-- Inline Critical CSS -->
 <style>
+/* Critical CSS */
 html {font-family:'Inter',sans-serif; scroll-behavior:smooth; line-height:1.6; background:#f9f9f9; color:#111;}
 body {margin:0;padding:0;}
 header, nav, main, footer, section, article {display:block;}
@@ -34,10 +34,8 @@ th,td{border:1px solid #ddd;padding:0.5rem;text-align:left;}
 .hidden{display:none;}
 </style>
 
-<!-- Lightweight Inline JS: lazy images, daily tip, FAQ toggle -->
 <script>
 document.addEventListener("DOMContentLoaded", function(){
-  // Lazy-load images
   const imgs = document.querySelectorAll('img.lazy');
   const observer = new IntersectionObserver((entries, obs)=>{
     entries.forEach(entry=>{
@@ -51,7 +49,6 @@ document.addEventListener("DOMContentLoaded", function(){
   });
   imgs.forEach(img=>observer.observe(img));
 
-  // Daily Tip
   const tips = [
     "Tip 1: Always check game RTP before playing.",
     "Tip 2: Set a budget to avoid overspending.",
@@ -62,7 +59,6 @@ document.addEventListener("DOMContentLoaded", function(){
   const tipElem = document.getElementById("daily-tip");
   if(tipElem) tipElem.textContent = tips[Math.floor(Math.random()*tips.length)];
 
-  // FAQ toggle
   const faqs = document.querySelectorAll(".faq-question");
   faqs.forEach(q=>{
     q.addEventListener("click", ()=>q.nextElementSibling.classList.toggle("hidden"));
@@ -87,16 +83,17 @@ document.addEventListener("DOMContentLoaded", function(){
   </div>
 </header>
 
-<main class="container">
-  <!-- TL;DR & Primary CTA moved to top for immediate visibility -->
-  <section>
-    <h2>TL;DR</h2>
-    <div class="tldr">
-      SlotsWise provides the best online slot experience with expert guides, bonuses, and top-rated games. Join today via our affiliate link for exclusive perks.
-      <br><a href="https://convert.ctypy.com/aff_c?offer_id=29526&aff_id=21885" class="cta" target="_blank" rel="noopener">Join SlotsWise Now</a>
-    </div>
-  </section>
+<!-- Hero / Slot Machine / Affiliate CTA moved up under header -->
+<section class="container">
+  <h2>Play Online Slots Today!</h2>
+  <div class="tldr">
+    Enjoy top-rated online slots with SlotsWise. Get exclusive bonuses and start winning today.
+    <br><a href="https://convert.ctypy.com/aff_c?offer_id=29526&aff_id=21885" class="cta" target="_blank" rel="noopener">Join SlotsWise Now</a>
+  </div>
+  <img class="lazy" data-src="https://via.placeholder.com/1200x400?text=Slots+Machine+Hero" alt="Slots Machine" width="1200" height="400">
+</section>
 
+<main class="container">
   <!-- Problem Section -->
   <section id="problem">
     <h2>Problem: Choosing the Right Online Slots Platform</h2>
@@ -166,7 +163,7 @@ document.addEventListener("DOMContentLoaded", function(){
   <!-- Daily Tip Section -->
   <section class="daily-tip" id="daily-tip"></section>
 
-  <!-- CTA repeated at the bottom -->
+  <!-- Bottom CTA -->
   <section>
     <a href="https://convert.ctypy.com/aff_c?offer_id=29526&aff_id=21885" class="cta" target="_blank" rel="noopener">Start Playing Now</a>
   </section>
