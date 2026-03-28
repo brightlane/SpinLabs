@@ -1983,3 +1983,148 @@ document.addEventListener('mouseout', function(e) {
 <script>
 document.getElementById('current-year').innerText = new Date().getFullYear();
 </script>
+<!-- MINI BLOG-STYLE ARTICLES -->
+<section id="mini-articles" lang="en">
+  <article>
+    <h3>Top 5 Tips to Win at Online Slots</h3>
+    <p>Learn the strategies that can boost your chances of hitting a jackpot. Explore paylines, bonus rounds, and progressive slots for maximum fun.</p>
+  </article>
+
+  <article>
+    <h3>How to Choose the Best Slot Game</h3>
+    <p>Not all slots are created equal. Check RTP, volatility, and themes to pick games that suit your style and bankroll.</p>
+  </article>
+
+  <article>
+    <h3>Recovering From a Losing Streak</h3>
+    <p>Even pros face losing streaks. Set limits, take breaks, and come back refreshed for a better gaming experience.</p>
+  </article>
+</section>
+
+<!-- SOLUTION-TO-ACTION MICRO-FUNNELS -->
+<section id="micro-funnels" lang="en">
+  <article>
+    <h3>Problem: Losing Too Often at Slots</h3>
+    <p>TL;DR: Smart strategies can help you enjoy slots longer and increase winning potential.</p>
+    <ul>
+      <li>Choose slots with high RTP and low volatility for steady wins.</li>
+      <li>Understand paylines and bonus features.</li>
+      <li><strong>Next step:</strong> <a href="#">Play your favorite slot now</a>.</li>
+    </ul>
+  </article>
+
+  <article>
+    <h3>Problem: Not Knowing Which Game to Pick</h3>
+    <p>TL;DR: Picking the right slot can make your gaming experience more fun and profitable.</p>
+    <ul>
+      <li>Check RTP, bonus features, and themes.</li>
+      <li>Try demo versions before wagering real money.</li>
+      <li><strong>Next step:</strong> <a href="#">Explore top slots today</a>.</li>
+    </ul>
+  </article>
+
+  <article>
+    <h3>Problem: Getting Bored With Repetitive Games</h3>
+    <p>TL;DR: Explore new slot games and themes to keep the excitement alive.</p>
+    <ul>
+      <li>Try progressive jackpot slots for big thrills.</li>
+      <li>Join seasonal or themed tournaments.</li>
+      <li><strong>Next step:</strong> <a href="#">Check new slot releases</a>.</li>
+    </ul>
+  </article>
+</section>
+
+<!-- DAILY TIP SECTION -->
+<section id="daily-tips" lang="en">
+  <h2>Daily Tip</h2>
+  <p id="tip-date"></p>
+  <div id="tips-rotation">
+    <p>Check the RTP before spinning – higher RTP means better long-term returns.</p>
+    <p>Take advantage of free spins promotions to increase your chances without extra cost.</p>
+    <p>Try progressive jackpot slots if you’re aiming for huge wins.</p>
+    <p>Set a budget for each session and stick to it for responsible gaming.</p>
+    <p>Play themed slots that match your mood for a more enjoyable experience.</p>
+  </div>
+</section>
+
+<script>
+  // Rotate Daily Tips
+  const dateEl = document.getElementById('tip-date');
+  const tips = document.querySelectorAll('#tips-rotation p');
+  let tipIndex = 0;
+  tips.forEach(t => t.style.display = 'none');
+  dateEl.textContent = 'Tip for ' + new Date().toLocaleDateString('en-US', {month:'long', day:'numeric', year:'numeric'});
+  tips[tipIndex].style.display = 'block';
+  setInterval(() => {
+    tips[tipIndex].style.display = 'none';
+    tipIndex = (tipIndex + 1) % tips.length;
+    tips[tipIndex].style.display = 'block';
+  }, 8000);
+</script>
+
+<!-- TRUST & SOCIAL PROOF SECTION -->
+<section id="trust" lang="en">
+  <h2>Why Players Trust Our Casino</h2>
+  <ul>
+    <li>Over 50,000+ active players worldwide.</li>
+    <li>Fair and regulated games with RNG certification.</li>
+    <li>High RTP slots and frequent bonuses.</li>
+    <li>24/7 support and secure banking options.</li>
+  </ul>
+</section>
+
+<!-- EXIT-INTENT POPUP -->
+<div id="exit-popup" style="display:none;position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,0.6);z-index:9999;">
+  <div style="background:#fff;padding:20px;margin:50px auto;max-width:500px;text-align:center;border-radius:10px;">
+    <h2>Before You Go...</h2>
+    <p>Spin your favorite slots now and grab exclusive bonuses!</p>
+    <a href="#" style="display:inline-block;padding:10px 20px;background:green;color:#fff;font-weight:bold;border-radius:5px;text-decoration:none;">Play Now</a>
+  </div>
+</div>
+
+<script>
+  let popupShown = sessionStorage.getItem('exitPopupShown');
+  document.addEventListener('mouseout', function(e) {
+    if(!popupShown && e.clientY < 0) {
+      document.getElementById('exit-popup').style.display = 'block';
+      sessionStorage.setItem('exitPopupShown','true');
+    }
+  });
+</script>
+
+<!-- MULTI-LANGUAGE SWITCHER -->
+<nav id="language-switcher" aria-label="Language selector">
+  <label for="lang-select">Choose your language:</label>
+  <select id="lang-select" onchange="switchLanguage(this.value)">
+    <option value="en" selected>English</option>
+    <option value="es">Español</option>
+    <option value="fr">Français</option>
+    <option value="de">Deutsch</option>
+    <option value="zh">中文</option>
+    <option value="ja">日本語</option>
+    <option value="ru">Русский</option>
+    <option value="ar">العربية</option>
+    <option value="pt">Português</option>
+    <option value="it">Italiano</option>
+  </select>
+</nav>
+
+<!-- ENGLISH CONTENT -->
+<section id="content-en" lang="en">
+  <h1>Spin and Win Big!</h1>
+  <p>Discover exciting online slots with huge jackpots and endless fun. <a href="#">Play now and claim your bonus!</a></p>
+</section>
+<section id="content-es" lang="es" style="display:none;">
+  <h1>¡Gira y gana a lo grande!</h1>
+  <p>Descubre emocionantes tragamonedas en línea con grandes jackpots y diversión infinita. <a href="#">¡Juega ahora y reclama tu bono!</a></p>
+</section>
+<!-- Repeat similar sections for fr, de, zh, ja, ru, ar, pt, it -->
+
+<script>
+  function switchLanguage(lang) {
+    const sections = document.querySelectorAll('section[id^="content-"]');
+    sections.forEach(sec => sec.style.display = 'none');
+    const selected = document.getElementById('content-' + lang);
+    if(selected) selected.style.display = 'block';
+  }
+</script>
