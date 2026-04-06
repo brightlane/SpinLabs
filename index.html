@@ -4,8 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Massive Jackpot Wins at SlotsWise! Win big with exciting slots and jackpots.">
-    <meta name="keywords" content="jackpot, slot machine, big win, win big, casino, online slots">
+    <meta name="description" content="Massive Jackpot Wins at SlotsWise! Play and win big with floating coins and riches!">
+    <meta name="keywords" content="jackpot, slot machine, big win, win big, casino, online slots, floating money">
     <title>Big Jackpot Wins at SlotsWise!</title>
     <style>
         body {
@@ -15,15 +15,19 @@
             padding: 0;
             background: #000;
             color: #fff;
+            position: relative;
+            overflow: hidden;
         }
 
         h1 {
-            font-size: 35px; /* Reduced size */
+            font-size: 35px;
             color: #FFD700;
             font-weight: bold;
             text-transform: uppercase;
             animation: fireworks 1.5s infinite, rotateColors 5s infinite linear;
             position: relative;
+            z-index: 1;
+            cursor: pointer;
         }
 
         /* Firework effect for headline */
@@ -60,6 +64,31 @@
 
             100% {
                 color: #ff1493;
+            }
+        }
+
+        /* Floating Coins */
+        .coin {
+            position: absolute;
+            width: 50px;
+            height: 50px;
+            background: url('https://www.pngall.com/wp-content/uploads/2016/06/Gold-Coin-PNG-Image.png') no-repeat center center;
+            background-size: contain;
+            animation: floatCoins 5s linear infinite;
+            z-index: 0;
+        }
+
+        @keyframes floatCoins {
+            0% {
+                transform: translateY(0) rotate(0deg);
+            }
+
+            50% {
+                transform: translateY(-200px) rotate(180deg);
+            }
+
+            100% {
+                transform: translateY(0) rotate(360deg);
             }
         }
 
@@ -133,10 +162,19 @@
 
 <body>
 
-    <h1>Congratulations, you could win a million dollars!</h1>
+    <!-- Headline that is clickable -->
+    <h1 onclick="window.location.href='https://convert.ctypy.com/aff_c?offer_id=29526&aff_id=21885'">
+        Congratulations, You Could Win A Million Dollars!
+    </h1>
+
+    <!-- Floating Coins -->
+    <div class="coin" style="top: 100px; left: 20%;"></div>
+    <div class="coin" style="top: 200px; left: 40%;"></div>
+    <div class="coin" style="top: 300px; left: 60%;"></div>
+    <div class="coin" style="top: 400px; left: 80%;"></div>
 
     <div class="slot-machines-container">
-        <!-- Slot Machine Images - Replace these links with your actual images -->
+        <!-- Slot Machine Images -->
         <a href="https://convert.ctypy.com/aff_c?offer_id=29526&aff_id=21885" class="slot-machine">
             <img src="https://media.istockphoto.com/id/1137983955/photo/jackpot-slot-machine-with-crowd-of-golden-coins.jpg?s=612x612&w=0&k=20&c=CoQbdwbfs8yFd5wK3uELRB5seCp5Yp3zkp1Q5EMjRkA=" alt="Triple Sevens Slot">
         </a>
