@@ -19,9 +19,9 @@
             position: relative;
         }
 
-        /* Headline with sparkling effect */
+        /* Reduced Headline size by 40% */
         h1 {
-            font-size: 50px;
+            font-size: 30px;
             color: #FFD700;
             font-weight: bold;
             text-transform: uppercase;
@@ -74,6 +74,7 @@
             color: #fff;
             animation: floatUp 6s infinite ease-in-out;
             z-index: 0;
+            cursor: pointer;
         }
 
         @keyframes floatUp {
@@ -119,26 +120,38 @@
 
 <body>
 
-    <!-- Sparkling Headline -->
+    <!-- Clickable headline -->
     <h1 onclick="window.location.href='https://convert.ctypy.com/aff_c?offer_id=29526&aff_id=21885'">
         Congratulations! You Could Win a Million Dollars!
     </h1>
 
-    <!-- Floating Money Words -->
-    <div class="floating-text" style="top: 10%; left: 10%; animation-duration: 8s;">
+    <!-- Floating Money Words (Doubling the amount of floating words) -->
+    <div class="floating-text" style="top: 10%; left: 10%; animation-duration: 8s;" onclick="window.location.href='https://convert.ctypy.com/aff_c?offer_id=29526&aff_id=21885'">
         Win Big!
     </div>
-    <div class="floating-text" style="top: 30%; left: 30%; animation-duration: 10s;">
+    <div class="floating-text" style="top: 30%; left: 30%; animation-duration: 10s;" onclick="window.location.href='https://convert.ctypy.com/aff_c?offer_id=29526&aff_id=21885'">
         Instant Cash!
     </div>
-    <div class="floating-text" style="top: 60%; left: 50%; animation-duration: 12s;">
+    <div class="floating-text" style="top: 60%; left: 50%; animation-duration: 12s;" onclick="window.location.href='https://convert.ctypy.com/aff_c?offer_id=29526&aff_id=21885'">
         Jackpot!
     </div>
-    <div class="floating-text" style="top: 50%; left: 70%; animation-duration: 6s;">
+    <div class="floating-text" style="top: 50%; left: 70%; animation-duration: 6s;" onclick="window.location.href='https://convert.ctypy.com/aff_c?offer_id=29526&aff_id=21885'">
         Don’t Miss Out!
     </div>
+    <div class="floating-text" style="top: 20%; left: 40%; animation-duration: 9s;" onclick="window.location.href='https://convert.ctypy.com/aff_c?offer_id=29526&aff_id=21885'">
+        Play Now!
+    </div>
+    <div class="floating-text" style="top: 70%; left: 80%; animation-duration: 11s;" onclick="window.location.href='https://convert.ctypy.com/aff_c?offer_id=29526&aff_id=21885'">
+        Big Winnings!
+    </div>
+    <div class="floating-text" style="top: 80%; left: 20%; animation-duration: 7s;" onclick="window.location.href='https://convert.ctypy.com/aff_c?offer_id=29526&aff_id=21885'">
+        Your Turn!
+    </div>
+    <div class="floating-text" style="top: 40%; left: 60%; animation-duration: 6s;" onclick="window.location.href='https://convert.ctypy.com/aff_c?offer_id=29526&aff_id=21885'">
+        Get Paid!
+    </div>
 
-    <!-- Claim Button -->
+    <!-- Claim button -->
     <button class="cta-button" onclick="claimJackpot()">Claim Your Jackpot Now!</button>
 
     <!-- Jackpot Sound -->
