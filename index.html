@@ -4,9 +4,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Massive Jackpot Wins at SlotsWise! Play and win big with floating coins and riches!">
-    <meta name="keywords" content="jackpot, slot machine, big win, win big, casino, online slots, floating money">
-    <title>Big Jackpot Wins at SlotsWise!</title>
+    <meta name="description" content="Massive Jackpot Wins! Celebrate and win big at SlotsWise!">
+    <meta name="keywords" content="jackpot, big win, money, casino, online slots">
+    <title>Congratulations! You Could Win a Million Dollars!</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -15,22 +15,22 @@
             padding: 0;
             background: #000;
             color: #fff;
-            position: relative;
             overflow: hidden;
+            position: relative;
         }
 
+        /* Sparkling effect on the headline */
         h1 {
-            font-size: 35px;
+            font-size: 40px;
             color: #FFD700;
             font-weight: bold;
             text-transform: uppercase;
-            animation: fireworks 1.5s infinite, rotateColors 5s infinite linear;
+            animation: fireworks 2s infinite, rotateColors 5s infinite linear;
             position: relative;
-            z-index: 1;
             cursor: pointer;
+            padding-top: 50px;
         }
 
-        /* Firework effect for headline */
         @keyframes fireworks {
             0% {
                 text-shadow: 0 0 5px #FFD700, 0 0 10px #FFD700, 0 0 15px #ff5733, 0 0 20px #ff1493, 0 0 25px #ff1493;
@@ -67,20 +67,20 @@
             }
         }
 
-        /* Floating Coins */
+        /* Floating coins or dollar bills */
         .coin {
             position: absolute;
             width: 50px;
             height: 50px;
-            background: url('https://www.pngall.com/wp-content/uploads/2016/06/Gold-Coin-PNG-Image.png') no-repeat center center;
-            background-size: contain;
-            animation: floatCoins 5s linear infinite;
-            z-index: 0;
+            background-size: cover;
+            animation: float 6s infinite ease-in-out;
+            z-index: 1;
+            opacity: 0.9;
         }
 
-        @keyframes floatCoins {
+        @keyframes float {
             0% {
-                transform: translateY(0) rotate(0deg);
+                transform: translateY(0) rotate(0);
             }
 
             50% {
@@ -92,58 +92,9 @@
             }
         }
 
-        .slot-machines-container {
-            position: relative;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            margin-top: 50px;
-        }
-
-        .slot-machine {
-            margin: 0 20px;
-            width: 300px;
-            height: 200px;
-            background-color: #f0f0f0;
-            border-radius: 8px;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-            cursor: pointer;
-            transition: transform 0.3s ease;
-        }
-
-        .slot-machine:hover {
-            transform: scale(1.1);
-        }
-
-        .slot-machine img {
-            width: 100%;
-            height: 100%;
-            border-radius: 8px;
-        }
-
-        .cta-button {
-            margin-top: 30px;
-            padding: 15px 30px;
-            font-size: 20px;
-            color: #fff;
-            background-color: #f44336;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            transition: background-color 0.3s;
-        }
-
-        .cta-button:hover {
-            background-color: #d32f2f;
-        }
-
-        #jackpot-sound {
-            display: none;
-        }
-
-        /* Styling for the Jackpot button */
+        /* Button styling */
         .claim-button {
-            margin-top: 20px;
+            margin-top: 30px;
             padding: 20px 40px;
             font-size: 24px;
             color: #fff;
@@ -157,35 +108,26 @@
         .claim-button:hover {
             background-color: #ff4da6;
         }
+
     </style>
 </head>
 
 <body>
 
-    <!-- Headline that is clickable -->
+    <!-- Clickable headline -->
     <h1 onclick="window.location.href='https://convert.ctypy.com/aff_c?offer_id=29526&aff_id=21885'">
-        Congratulations, You Could Win A Million Dollars!
+        Congratulations, You Could Win a Million Dollars!
     </h1>
 
-    <!-- Floating Coins -->
-    <div class="coin" style="top: 100px; left: 20%;"></div>
-    <div class="coin" style="top: 200px; left: 40%;"></div>
-    <div class="coin" style="top: 300px; left: 60%;"></div>
-    <div class="coin" style="top: 400px; left: 80%;"></div>
+    <!-- Floating Coins Effect -->
+    <div class="coin" style="top: 100px; left: 20%; background: url('https://brightlane.github.io/SpinLabs/coin.png');"></div>
+    <div class="coin" style="top: 150px; left: 40%; background: url('https://brightlane.github.io/SpinLabs/coin.png');"></div>
+    <div class="coin" style="top: 200px; left: 60%; background: url('https://brightlane.github.io/SpinLabs/coin.png');"></div>
+    <div class="coin" style="top: 250px; left: 80%; background: url('https://brightlane.github.io/SpinLabs/coin.png');"></div>
+    <div class="coin" style="top: 300px; left: 30%; background: url('https://brightlane.github.io/SpinLabs/coin.png');"></div>
+    <div class="coin" style="top: 350px; left: 70%; background: url('https://brightlane.github.io/SpinLabs/coin.png');"></div>
 
-    <div class="slot-machines-container">
-        <!-- Slot Machine Images -->
-        <a href="https://convert.ctypy.com/aff_c?offer_id=29526&aff_id=21885" class="slot-machine">
-            <img src="https://media.istockphoto.com/id/1137983955/photo/jackpot-slot-machine-with-crowd-of-golden-coins.jpg?s=612x612&w=0&k=20&c=CoQbdwbfs8yFd5wK3uELRB5seCp5Yp3zkp1Q5EMjRkA=" alt="Triple Sevens Slot">
-        </a>
-        <a href="https://convert.ctypy.com/aff_c?offer_id=29526&aff_id=21885" class="slot-machine">
-            <img src="https://media.istockphoto.com/id/1137983955/photo/jackpot-slot-machine-with-crowd-of-golden-coins.jpg?s=612x612&w=0&k=20&c=CoQbdwbfs8yFd5wK3uELRB5seCp5Yp3zkp1Q5EMjRkA=" alt="Triple Sevens Slot">
-        </a>
-        <a href="https://convert.ctypy.com/aff_c?offer_id=29526&aff_id=21885" class="slot-machine">
-            <img src="https://media.istockphoto.com/id/1137983955/photo/jackpot-slot-machine-with-crowd-of-golden-coins.jpg?s=612x612&w=0&k=20&c=CoQbdwbfs8yFd5wK3uELRB5seCp5Yp3zkp1Q5EMjRkA=" alt="Triple Sevens Slot">
-        </a>
-    </div>
-
+    <!-- Claim button -->
     <button class="claim-button" onclick="claimJackpot()">Claim Your Jackpot Now!</button>
 
     <!-- Jackpot Sound -->
