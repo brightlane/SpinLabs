@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Massive Jackpot Wins with SlotsWise! Play and win big!">
+    <meta name="description" content="Massive Jackpot Wins at SlotsWise! Win big with exciting slots and jackpots.">
     <meta name="keywords" content="jackpot, slot machine, big win, win big, casino, online slots">
     <title>Big Jackpot Wins at SlotsWise!</title>
     <style>
@@ -18,23 +18,26 @@
         }
 
         h1 {
-            font-size: 37.5px; /* Reduced size by 25% */
+            font-size: 45px; /* Slightly bigger font */
             color: #FFD700;
             font-weight: bold;
-            animation: sparkle 1s infinite alternate, rotateColors 5s infinite linear;
+            text-transform: uppercase;
+            animation: fireworks 1.5s infinite, rotateColors 5s infinite linear;
+            position: relative;
         }
 
-        @keyframes sparkle {
+        /* Firework effect for headline */
+        @keyframes fireworks {
             0% {
-                color: #FFD700;
+                text-shadow: 0 0 5px #FFD700, 0 0 10px #FFD700, 0 0 15px #ff5733, 0 0 20px #ff1493, 0 0 25px #ff1493;
             }
 
             50% {
-                color: #ff5733;
+                text-shadow: 0 0 5px #28a745, 0 0 10px #28a745, 0 0 15px #00bfff, 0 0 20px #00bfff, 0 0 25px #ff1493;
             }
 
             100% {
-                color: #28a745;
+                text-shadow: 0 0 5px #FFD700, 0 0 10px #FFD700, 0 0 15px #ff5733, 0 0 20px #ff1493, 0 0 25px #ff1493;
             }
         }
 
@@ -75,13 +78,8 @@
             background-color: #f0f0f0;
             border-radius: 8px;
             box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+            cursor: pointer;
             transition: transform 0.3s ease;
-        }
-
-        .slot-machine img {
-            width: 100%;
-            height: 100%;
-            border-radius: 8px;
         }
 
         .slot-machine:hover {
@@ -107,28 +105,43 @@
         #jackpot-sound {
             display: none;
         }
+
+        /* Styling for the Jackpot button */
+        .claim-button {
+            margin-top: 20px;
+            padding: 20px 40px;
+            font-size: 24px;
+            color: #fff;
+            background-color: #ff1493;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3);
+        }
+
+        .claim-button:hover {
+            background-color: #ff4da6;
+        }
     </style>
 </head>
 
 <body>
 
-    <h1>Congratulations, you may have won a million dollars!</h1>
+    <h1>Congratulations, You May Have Won A Million Dollars!</h1>
 
     <div class="slot-machines-container">
         <a href="https://convert.ctypy.com/aff_c?offer_id=29526&aff_id=21885" class="slot-machine">
-            <img src="https://via.placeholder.com/150?text=Slot+Machine+1" alt="Slot Machine 1">
+            <div>Slot Machine 1</div>
         </a>
         <a href="https://convert.ctypy.com/aff_c?offer_id=29526&aff_id=21885" class="slot-machine">
-            <img src="https://via.placeholder.com/150?text=Slot+Machine+2" alt="Slot Machine 2">
+            <div>Slot Machine 2</div>
         </a>
         <a href="https://convert.ctypy.com/aff_c?offer_id=29526&aff_id=21885" class="slot-machine">
-            <img src="https://via.placeholder.com/150?text=Slot+Machine+3" alt="Slot Machine 3">
+            <div>Slot Machine 3</div>
         </a>
     </div>
 
-    <button class="cta-button" onclick="window.location.href='https://convert.ctypy.com/aff_c?offer_id=29526&aff_id=21885'">
-        Claim Your Jackpot Now!
-    </button>
+    <button class="claim-button" onclick="claimJackpot()">Claim Your Jackpot Now!</button>
 
     <!-- Jackpot Sound -->
     <audio id="jackpot-sound" preload="auto">
@@ -137,11 +150,12 @@
     </audio>
 
     <script>
-        // Play jackpot sound when clicking "Claim Your Jackpot Now"
-        document.querySelector(".cta-button").addEventListener("click", function () {
+        // Function to play jackpot sound when claiming jackpot
+        function claimJackpot() {
             var sound = document.getElementById("jackpot-sound");
             sound.play();
-        });
+            window.location.href = "https://convert.ctypy.com/aff_c?offer_id=29526&aff_id=21885";
+        }
     </script>
 
 </body>
