@@ -1,187 +1,126 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Claim your jackpot now with huge slot bonuses and massive wins!">
-  <title>SpinLabs - Jackpot Winning Slots</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      background-color: #000;
-      color: #fff;
-      margin: 0;
-      padding: 0;
-      overflow-x: hidden;
-    }
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Massive Jackpot Wins with SlotsWise! Play and win big!">
+    <meta name="keywords" content="jackpot, slot machine, big win, win big, casino, online slots">
+    <title>Big Jackpot Wins at SlotsWise!</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+            background: #000;
+            color: #fff;
+        }
 
-    /* Hero Section */
-    .hero {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      height: 100vh;
-      text-align: center;
-      background: url('your-background-image.jpg') no-repeat center center fixed;
-      background-size: cover;
-      position: relative;
-    }
+        h1 {
+            font-size: 50px;
+            color: #FFD700;
+            font-weight: bold;
+            animation: sparkle 1s infinite alternate;
+        }
 
-    .hero h1 {
-      font-size: 4rem;
-      font-weight: 700;
-      background: linear-gradient(to right, #ff3e00, #ffba00);
-      background-clip: text;
-      color: transparent;
-      animation: sparkle 3s infinite alternate;
-      margin-bottom: 20px;
-    }
+        @keyframes sparkle {
+            0% {
+                color: #FFD700;
+            }
 
-    @keyframes sparkle {
-      0% {
-        text-shadow: 0 0 5px #ff0, 0 0 10px #ff0, 0 0 15px #ff0, 0 0 20px #ff0;
-      }
-      100% {
-        text-shadow: 0 0 5px #ff00ff, 0 0 10px #ff00ff, 0 0 15px #ff00ff, 0 0 20px #ff00ff;
-      }
-    }
+            50% {
+                color: #ff5733;
+            }
 
-    .cta-button {
-      background-color: #ff3e00;
-      color: white;
-      font-size: 1.5rem;
-      padding: 12px 30px;
-      border-radius: 25px;
-      text-decoration: none;
-      margin-top: 20px;
-      transition: background-color 0.3s;
-    }
+            100% {
+                color: #28a745;
+            }
+        }
 
-    .cta-button:hover {
-      background-color: #ffba00;
-    }
+        .slot-machines-container {
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 50px;
+        }
 
-    /* Slot Machine Animation */
-    .slot-machine {
-      width: 120px;
-      height: 120px;
-      position: absolute;
-      animation: fall 10s linear infinite;
-      cursor: pointer;
-    }
+        .slot-machine {
+            margin: 0 20px;
+            width: 150px;
+            height: 150px;
+            background-color: #f0f0f0;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+            transition: transform 0.3s ease;
+        }
 
-    /* Falling Animation */
-    @keyframes fall {
-      0% {
-        top: -150px;
-        opacity: 1;
-      }
-      50% {
-        top: 60%;
-        opacity: 0.8;
-      }
-      100% {
-        top: 100vh;
-        opacity: 0;
-      }
-    }
+        .slot-machine img {
+            width: 100%;
+            height: 100%;
+            border-radius: 8px;
+        }
 
-    .slot-machine:hover {
-      transform: scale(1.1);
-    }
+        .slot-machine:hover {
+            transform: scale(1.1);
+        }
 
-    /* Urgent Message */
-    .urgent-message {
-      display: none;
-      font-size: 1.2rem;
-      color: #ff3e00;
-      font-weight: bold;
-      margin-top: 20px;
-    }
+        .cta-button {
+            margin-top: 30px;
+            padding: 15px 30px;
+            font-size: 20px;
+            color: #fff;
+            background-color: #f44336;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
 
-    .urgent-button {
-      background-color: #ff0000;
-      color: white;
-      font-size: 1.2rem;
-      padding: 12px 30px;
-      border-radius: 25px;
-      text-decoration: none;
-      margin-top: 20px;
-      transition: background-color 0.3s;
-    }
+        .cta-button:hover {
+            background-color: #d32f2f;
+        }
 
-    .urgent-button:hover {
-      background-color: #cc0000;
-    }
-
-    /* Animation for buttons */
-    .animate-button {
-      animation: pulse 2s infinite;
-    }
-
-    @keyframes pulse {
-      0% {
-        transform: scale(1);
-      }
-      50% {
-        transform: scale(1.1);
-      }
-      100% {
-        transform: scale(1);
-      }
-    }
-  </style>
+        #jackpot-sound {
+            display: none;
+        }
+    </style>
 </head>
+
 <body>
 
-  <!-- Jackpot Sound -->
-  <audio id="jackpot-sound" src="jackpot.mp3" preload="auto"></audio>
+    <h1>Congratulations! You Just Won 1 MILLION DOLLARS!</h1>
 
-  <section class="hero">
-    <h1>
-      <a href="https://convert.ctypy.com/aff_c?offer_id=29526&aff_id=21885" style="text-decoration: none; color: inherit;">
-        1 MILLION DOLLARS
-      </a>
-    </h1>
-    <p>Claim your jackpot now and start winning!</p>
-    <a href="https://convert.ctypy.com/aff_c?offer_id=29526&aff_id=21885" class="cta-button">
-      Get Started Now
-    </a>
-
-    <!-- Slot Machines Falling -->
-    <a href="https://convert.ctypy.com/aff_c?offer_id=29526&aff_id=21885">
-      <img src="slot-machine1.png" alt="Slot Machine 1" class="slot-machine" style="left: 10%; animation-delay: 0s;">
-    </a>
-    <a href="https://convert.ctypy.com/aff_c?offer_id=29526&aff_id=21885">
-      <img src="slot-machine2.png" alt="Slot Machine 2" class="slot-machine" style="left: 50%; animation-delay: 3s;">
-    </a>
-    <a href="https://convert.ctypy.com/aff_c?offer_id=29526&aff_id=21885">
-      <img src="slot-machine3.png" alt="Slot Machine 3" class="slot-machine" style="left: 90%; animation-delay: 6s;">
-    </a>
-
-    <!-- Urgent Message (Appears after delay) -->
-    <div id="urgent-message" class="urgent-message">
-      Don't leave the million dollars on the table! Act fast before it's too late.
-      <br>
-      <a href="https://convert.ctypy.com/aff_c?offer_id=29526&aff_id=21885" class="urgent-button animate-button">
-        Claim Now
-      </a>
+    <div class="slot-machines-container">
+        <a href="https://convert.ctypy.com/aff_c?offer_id=29526&aff_id=21885" class="slot-machine">
+            <img src="https://via.placeholder.com/150?text=Slot+Machine+1" alt="Slot Machine 1">
+        </a>
+        <a href="https://convert.ctypy.com/aff_c?offer_id=29526&aff_id=21885" class="slot-machine">
+            <img src="https://via.placeholder.com/150?text=Slot+Machine+2" alt="Slot Machine 2">
+        </a>
+        <a href="https://convert.ctypy.com/aff_c?offer_id=29526&aff_id=21885" class="slot-machine">
+            <img src="https://via.placeholder.com/150?text=Slot+Machine+3" alt="Slot Machine 3">
+        </a>
     </div>
-  </section>
 
-  <script>
-    // Play Jackpot Sound when the page loads
-    window.onload = function() {
-      var jackpotSound = document.getElementById("jackpot-sound");
-      jackpotSound.play();
-    };
+    <button class="cta-button" onclick="window.location.href='https://convert.ctypy.com/aff_c?offer_id=29526&aff_id=21885'">
+        Claim Your Jackpot Now!
+    </button>
 
-    // Show urgent message after a 10-second delay
-    setTimeout(function() {
-      document.getElementById('urgent-message').style.display = 'block';
-    }, 10000); // 10 seconds delay
-  </script>
+    <audio id="jackpot-sound" autoplay>
+        <source src="https://example.com/jackpot.mp3" type="audio/mp3">
+        Your browser does not support the audio tag.
+    </audio>
+
+    <script>
+        // Play jackpot sound after user clicks on the CTA button
+        document.querySelector(".cta-button").addEventListener("click", function () {
+            var jackpotSound = document.getElementById("jackpot-sound");
+            jackpotSound.play();
+        });
+    </script>
 
 </body>
+
 </html>
