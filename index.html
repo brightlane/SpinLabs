@@ -1,195 +1,160 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="SlotsWise online slots – Claim massive jackpots and bonuses! $1,000,000 in virtual wins, plus 57,500 Gold Coins and 27.5 Sweepstakes Coins.">
-<meta name="keywords" content="SlotsWise, online slots, slot bonuses, jackpot wins, casino slots, free coins, sweepstakes, casino bonuses">
-<title>SlotsWise Mega Jackpot Bonus</title>
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "Offer",
-  "name": "SlotsWise Mega Jackpot Bonus",
-  "url": "https://convert.ctypy.com/aff_c?offer_id=29526&aff_id=21885",
-  "priceCurrency": "USD",
-  "price": "0.00",
-  "availability": "https://schema.org/InStock",
-  "description": "Claim your SlotsWise $1,000,000 jackpot bonus, 57,500 Gold Coins and 27.5 Sweepstakes Coins today!"
-}
-</script>
-<style>
-  body {
-    margin: 0;
-    font-family: 'Arial', sans-serif;
-    background: linear-gradient(to bottom, #0a0a0a, #111);
-    color: #fff;
-    overflow-x: hidden;
-  }
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Huge jackpot bonuses, win big on slots today!">
+  <title>SpinLabs - Jackpot Winning Slots</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #000;
+      color: #fff;
+      margin: 0;
+      padding: 0;
+    }
 
-  header {
-    display: flex;
-    justify-content: space-between;
-    padding: 15px 30px;
-    background: #000;
-    align-items: center;
-    position: sticky;
-    top: 0;
-    z-index: 100;
-  }
+    /* Hero Section */
+    .hero {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      text-align: center;
+      background: url('your-background-image.jpg') no-repeat center center fixed;
+      background-size: cover;
+      position: relative;
+    }
 
-  header a.logo {
-    font-size: 1.7rem;
-    font-weight: bold;
-    color: #ffd700;
-    text-decoration: none;
-  }
+    .hero h1 {
+      font-size: 4rem;
+      font-weight: 700;
+      background: linear-gradient(to right, #ff3e00, #ffba00);
+      background-clip: text;
+      color: transparent;
+      animation: sparkle 3s infinite alternate;
+      margin-bottom: 20px;
+    }
 
-  header a.cta {
-    background: #0077ff;
-    padding: 12px 24px;
-    color: #fff;
-    font-weight: bold;
-    border-radius: 8px;
-    text-decoration: none;
-  }
+    @keyframes sparkle {
+      0% {
+        text-shadow: 0 0 5px #ff0, 0 0 10px #ff0, 0 0 15px #ff0, 0 0 20px #ff0;
+      }
+      100% {
+        text-shadow: 0 0 5px #ff00ff, 0 0 10px #ff00ff, 0 0 15px #ff00ff, 0 0 20px #ff00ff;
+      }
+    }
 
-  .hero {
-    text-align: center;
-    padding: 80px 20px 60px 20px;
-    position: relative;
-  }
+    .cta-button {
+      background-color: #ff3e00;
+      color: white;
+      font-size: 1.5rem;
+      padding: 12px 30px;
+      border-radius: 25px;
+      text-decoration: none;
+      margin-top: 20px;
+      transition: background-color 0.3s;
+    }
 
-  .jackpot {
-    font-size: 4rem;
-    font-weight: bold;
-    color: #ffd700;
-    text-shadow:
-      0 0 10px #fff,
-      0 0 20px #ffd700,
-      0 0 30px #ffae00,
-      0 0 40px #ffdd55,
-      0 0 50px #fff;
-    animation: sparkle 1s infinite alternate;
-    margin-bottom: 30px;
-    position: relative;
-    display: inline-block;
-  }
+    .cta-button:hover {
+      background-color: #ffba00;
+    }
 
-  @keyframes sparkle {
-    0% { text-shadow: 0 0 10px #fff,0 0 20px #ffd700,0 0 30px #ffae00,0 0 40px #ffdd55,0 0 50px #fff; }
-    50% { text-shadow: 0 0 20px #fff,0 0 40px #ffd700,0 0 60px #ffae00,0 0 80px #ffdd55,0 0 100px #fff; }
-    100% { text-shadow: 0 0 10px #fff,0 0 20px #ffd700,0 0 30px #ffae00,0 0 40px #ffdd55,0 0 50px #fff; }
-  }
+    .slot-machine {
+      width: 120px;
+      height: 120px;
+      margin: 20px;
+      cursor: pointer;
+      transition: transform 0.3s ease;
+    }
 
-  .sparkle-particles {
-    position: absolute;
-    width: 100%;
-    height: 200px;
-    top: -50px;
-    left: 0;
-    pointer-events: none;
-    overflow: visible;
-  }
+    .slot-machine:hover {
+      transform: scale(1.1);
+    }
 
-  .particle {
-    position: absolute;
-    width: 8px;
-    height: 8px;
-    background: radial-gradient(circle at 30% 30%, #fff, #ffd700);
-    border-radius: 50%;
-    animation: particle-fall linear infinite;
-  }
+    .urgent-message {
+      display: none;
+      font-size: 1.2rem;
+      color: #ff3e00;
+      font-weight: bold;
+      margin-top: 20px;
+    }
 
-  @keyframes particle-fall {
-    0% { transform: translateY(0) scale(1); opacity: 1; }
-    100% { transform: translateY(200px) scale(0.5); opacity: 0; }
-  }
+    .urgent-button {
+      background-color: #ff0000;
+      color: white;
+      font-size: 1.2rem;
+      padding: 12px 30px;
+      border-radius: 25px;
+      text-decoration: none;
+      margin-top: 20px;
+      transition: background-color 0.3s;
+    }
 
-  .cta-hero {
-    display: inline-block;
-    background: #ff0000;
-    padding: 20px 40px;
-    border-radius: 12px;
-    font-size: 1.4rem;
-    font-weight: bold;
-    text-decoration: none;
-    color: #fff;
-    margin-top: 20px;
-    transition: transform 0.3s;
-  }
+    .urgent-button:hover {
+      background-color: #cc0000;
+    }
 
-  .cta-hero:hover {
-    transform: scale(1.1);
-  }
+    /* Animation for buttons */
+    .animate-button {
+      animation: pulse 2s infinite;
+    }
 
-  .bonus-section {
-    text-align: center;
-    margin: 40px 20px;
-    font-size: 1.3rem;
-    color: #ffd700;
-  }
+    @keyframes pulse {
+      0% {
+        transform: scale(1);
+      }
+      50% {
+        transform: scale(1.1);
+      }
+      100% {
+        transform: scale(1);
+      }
+    }
 
-  .brands {
-    text-align: center;
-    margin: 50px 0;
-  }
-
-  .brands img {
-    margin: 15px;
-    max-width: 120px;
-    filter: brightness(1.2);
-  }
-
-  .footer {
-    text-align: center;
-    padding: 20px;
-    background: #000;
-    color: #888;
-  }
-</style>
+  </style>
 </head>
 <body>
+  <section class="hero">
+    <h1>
+      <a href="https://convert.ctypy.com/aff_c?offer_id=29526&aff_id=21885" style="text-decoration: none; color: inherit;">
+        1 MILLION DOLLARS
+      </a>
+    </h1>
+    <p>Claim your jackpot now and start winning!</p>
+    <a href="https://convert.ctypy.com/aff_c?offer_id=29526&aff_id=21885" class="cta-button">
+      Get Started Now
+    </a>
 
-<header>
-  <a href="https://convert.ctypy.com/aff_c?offer_id=29526&aff_id=21885" class="logo">SlotsWise</a>
-  <a href="https://convert.ctypy.com/aff_c?offer_id=29526&aff_id=21885" class="cta">Get Started Now</a>
-</header>
+    <!-- Slot Machines -->
+    <div class="slot-machines">
+      <a href="https://convert.ctypy.com/aff_c?offer_id=29526&aff_id=21885">
+        <img src="slot-machine1.png" alt="Slot Machine 1" class="slot-machine">
+      </a>
+      <a href="https://convert.ctypy.com/aff_c?offer_id=29526&aff_id=21885">
+        <img src="slot-machine2.png" alt="Slot Machine 2" class="slot-machine">
+      </a>
+      <a href="https://convert.ctypy.com/aff_c?offer_id=29526&aff_id=21885">
+        <img src="slot-machine3.png" alt="Slot Machine 3" class="slot-machine">
+      </a>
+    </div>
 
-<section class="hero">
-  <div class="sparkle-particles" id="particles-container"></div>
-  <div class="jackpot">$1,000,000 JACKPOT!</div>
-  <a href="https://convert.ctypy.com/aff_c?offer_id=29526&aff_id=21885" class="cta-hero">Claim Your Bonus Now!</a>
-</section>
+    <!-- Urgent Message (Will appear after a delay) -->
+    <div id="urgent-message" class="urgent-message">
+      Don't leave the million dollars on the table! Act fast before it's too late.
+      <br>
+      <a href="https://convert.ctypy.com/aff_c?offer_id=29526&aff_id=21885" class="urgent-button animate-button">
+        Claim Now
+      </a>
+    </div>
+  </section>
 
-<section class="bonus-section">
-  <p>Our #1 Offer: <strong>57,500 Gold Coins</strong> + <strong>27.5 Sweepstakes Coins</strong></p>
-</section>
-
-<section class="brands">
-  <h2>Trusted Online Slot Brands</h2>
-  <img src="https://via.placeholder.com/120x60?text=Brand1" alt="Brand1">
-  <img src="https://via.placeholder.com/120x60?text=Brand2" alt="Brand2">
-  <img src="https://via.placeholder.com/120x60?text=Brand3" alt="Brand3">
-  <img src="https://via.placeholder.com/120x60?text=Brand4" alt="Brand4">
-</section>
-
-<footer class="footer">
-  &copy; 2026 SlotsWise. All Rights Reserved.
-</footer>
-
-<script>
-// Sparkle Particles
-const container = document.getElementById('particles-container');
-for (let i = 0; i < 40; i++) {
-  const particle = document.createElement('div');
-  particle.classList.add('particle');
-  particle.style.left = Math.random() * window.innerWidth + 'px';
-  particle.style.animationDuration = (1 + Math.random() * 2) + 's';
-  particle.style.width = particle.style.height = 5 + Math.random() * 8 + 'px';
-  container.appendChild(particle);
-}
-</script>
-
+  <script>
+    // Show urgent message after a 10-second delay
+    setTimeout(function() {
+      document.getElementById('urgent-message').style.display = 'block';
+    }, 10000); // 10 seconds delay
+  </script>
 </body>
 </html>
