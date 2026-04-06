@@ -1,91 +1,185 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<meta name="description" content="SlotsWise – Claim huge jackpots today! Beat all major online casino slots brands like NetEnt, Microgaming, Playtech, IGT, Pragmatic Play. Get 57,500 Gold Coins + 27.5 Sweepstakes Coins now!" />
-<meta name="keywords" content="SlotsWise, online slots, NetEnt slots, Microgaming slots, Playtech slots, IGT slots, Pragmatic Play slots, Yggdrasil slots, Red Tiger slots, slot jackpots, sweepstakes coins, bonus coins" />
-<title>SlotsWise – Biggest Online Slot Wins & Bonuses!</title>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
-<style>
-  :root {
-    --bg:#0a0a0a; --text:#fff; --accent:#ffcc00; --cta:#1d4ed8; --cta-hover:#2563eb;
-    --card:#111; --radius:16px; --shadow:0 8px 30px rgba(0,0,0,0.5);
-  }
-  body{font-family:"Inter",sans-serif;margin:0;background:var(--bg);color:var(--text);}
-  header{display:flex;justify-content:space-between;padding:1rem 2rem;background:var(--card);position:sticky;top:0;z-index:100;box-shadow:var(--shadow);}
-  header a.logo{color:var(--accent);font-weight:700;font-size:1.5rem;text-decoration:none;}
-  header a.cta-btn{background:var(--cta);color:#fff;padding:12px 24px;border-radius:var(--radius);text-decoration:none;font-weight:700;}
-  header a.cta-btn:hover{background:var(--cta-hover);}
-  .hero{text-align:center;padding:120px 20px;background:linear-gradient(135deg,#ffcc00,#f59e0b,#ff0000);color:#111;border-bottom:6px solid #fff;position:relative;}
-  .hero h1{font-size:3rem;margin-bottom:0.5rem;text-shadow:2px 2px 6px #000;}
-  .hero p{font-size:1.6rem;margin:0.5rem 0;font-weight:bold;text-shadow:1px 1px 4px #000;}
-  .hero .cta-btn{background:#111;color:var(--accent);padding:20px 40px;font-size:1.5rem;margin-top:1rem;border:3px solid var(--accent);display:inline-block;text-decoration:none;}
-  .hero .cta-btn:hover{background:var(--accent);color:#111;}
-  .container{max-width:1200px;margin:auto;padding:40px 1.5rem;}
-  h2{text-align:center;font-size:2.5rem;margin-bottom:2rem;color:var(--accent);text-shadow:1px 1px 4px #000;}
-  .brand-list{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:20px;}
-  .brand-card{background:var(--card);padding:20px;border-radius:var(--radius);text-align:center;box-shadow:var(--shadow);transition:transform 0.3s;}
-  .brand-card:hover{transform:scale(1.05);box-shadow:0 12px 40px rgba(255,255,255,0.5);}
-  .brand-card h3{color:var(--accent);margin-bottom:0.5rem;}
-  .brand-card p{font-size:1.1rem;margin:0.5rem 0;}
-  #exit-modal{display:none;position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,0.8);justify-content:center;align-items:center;z-index:1000;}
-  #exit-modal .modal-content{background:var(--card);padding:30px;border-radius:var(--radius);text-align:center;box-shadow:var(--shadow);color:var(--accent);}
-  #exit-modal .modal-content button{padding:16px 32px;background:var(--accent);color:#111;font-weight:700;border:none;border-radius:var(--radius);cursor:pointer;margin-top:20px;font-size:1.2rem;}
-  #exit-modal .modal-content button:hover{background:#fff;color:#111;}
-  .sticky-cta{position:fixed;right:20px;bottom:20px;background:var(--accent);color:#111;padding:16px 28px;border-radius:var(--radius);font-weight:bold;font-size:1.2rem;box-shadow:var(--shadow);}
-  .sticky-cta:hover{transform:scale(1.1);}
-</style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="index, follow">
+  <meta name="description" content="Get your huge bonus with SlotsWise! Claim 57,500 Gold Coins + 27.5 Sweepstakes Coins and win big on top online slots!">
+  <meta name="keywords" content="online slots, slot bonuses, jackpot wins, play slots, slot machine, casino games, gold coins, sweepstakes">
+  <title>SlotsWise - Claim Your Huge Bonus and Win Big</title>
+  <link rel="icon" href="favicon.png" type="image/png">
+  <style>
+    /* Reset */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+      background-color: #f8f9fa;
+      color: #333;
+    }
+    .container {
+      max-width: 1200px;
+      margin: auto;
+      padding: 0 20px;
+    }
+    /* Header */
+    header {
+      text-align: center;
+      padding: 50px 0;
+    }
+    header h1 {
+      font-size: 3rem;
+      font-weight: bold;
+      color: #ff6b6b;
+    }
+    header p {
+      font-size: 1.25rem;
+      color: #666;
+      margin-bottom: 20px;
+    }
+    header .cta-btn {
+      background-color: #ff6b6b;
+      color: white;
+      padding: 15px 25px;
+      font-size: 1.2rem;
+      border-radius: 8px;
+      text-decoration: none;
+      transition: background-color 0.3s ease;
+    }
+    header .cta-btn:hover {
+      background-color: #ff3b3b;
+    }
+    /* Section styles */
+    .section {
+      padding: 40px 0;
+      text-align: center;
+    }
+    .section h2 {
+      font-size: 2.5rem;
+      margin-bottom: 30px;
+      color: #333;
+    }
+    .section p {
+      font-size: 1.1rem;
+      color: #555;
+      margin-bottom: 20px;
+    }
+    .brands img {
+      max-width: 100px;
+      margin: 0 20px;
+    }
+    .cta {
+      display: flex;
+      justify-content: center;
+      margin-top: 40px;
+    }
+    .cta button {
+      padding: 15px 30px;
+      background-color: #ff6b6b;
+      color: white;
+      border: none;
+      font-size: 1.2rem;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+    .cta button:hover {
+      background-color: #ff3b3b;
+    }
+    /* Footer */
+    footer {
+      text-align: center;
+      padding: 20px 0;
+      background-color: #222;
+      color: white;
+    }
+    footer a {
+      color: white;
+      text-decoration: none;
+    }
+    footer a:hover {
+      text-decoration: underline;
+    }
+    /* Exit Pop-Up */
+    .exit-popup {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.5);
+      justify-content: center;
+      align-items: center;
+      z-index: 999;
+    }
+    .exit-popup .popup-content {
+      background: white;
+      padding: 30px;
+      border-radius: 10px;
+      text-align: center;
+      width: 400px;
+    }
+    .exit-popup button {
+      background-color: #ff6b6b;
+      color: white;
+      padding: 15px 30px;
+      border-radius: 8px;
+      border: none;
+      font-size: 1.2rem;
+      cursor: pointer;
+    }
+    .exit-popup button:hover {
+      background-color: #ff3b3b;
+    }
+  </style>
 </head>
-
 <body>
 
-<header>
-  <a href="https://convert.ctypy.com/aff_c?offer_id=29526&aff_id=21885" class="logo">SlotsWise Big Wins</a>
-  <a href="https://convert.ctypy.com/aff_c?offer_id=29526&aff_id=21885" class="cta-btn">Get Started Now</a>
-</header>
+  <header>
+    <h1>Claim Your Huge Slot Bonus Now!</h1>
+    <p>Get 57,500 Gold Coins + 27.5 Sweepstakes Coins and start spinning for big jackpots today!</p>
+    <a href="https://convert.ctypy.com/aff_c?offer_id=29526&aff_id=21885" class="cta-btn">Claim Your Bonus Now</a>
+  </header>
 
-<section class="hero">
-  <h1>🎰 MASSIVE JACKPOT WINS! 🎰</h1>
-  <p>YOU JUST HIT 57,500 GOLD COINS!</p>
-  <p>PLUS 27.5 SWEEPSTAKE COINS</p>
-  <a href="https://convert.ctypy.com/aff_c?offer_id=29526&aff_id=21885" class="cta-btn">CLAIM YOUR WIN NOW</a>
-</section>
-
-<section class="container" id="brands">
-  <h2>Top Online Slot Brands – SlotsWise Beats Them All</h2>
-  <div class="brand-list">
-    <div class="brand-card"><h3>NetEnt Slots</h3><p>SlotsWise jackpots are bigger than NetEnt’s top wins!</p></div>
-    <div class="brand-card"><h3>Microgaming Slots</h3><p>Feel the thrill: SlotsWise offers larger bonuses and sweepstakes coins!</p></div>
-    <div class="brand-card"><h3>Playtech Slots</h3><p>SlotsWise payouts are faster and more frequent than Playtech’s!</p></div>
-    <div class="brand-card"><h3>IGT Slots</h3><p>SlotsWise has the ultimate sweepstakes for big wins!</p></div>
-    <div class="brand-card"><h3>Pragmatic Play Slots</h3><p>Claim your mega bonus coins instantly on SlotsWise!</p></div>
-    <div class="brand-card"><h3>Yggdrasil Slots</h3><p>SlotsWise gives bigger jackpots than Yggdrasil!</p></div>
-    <div class="brand-card"><h3>Red Tiger Slots</h3><p>SlotsWise is your shortcut to massive gold coins!</p></div>
+  <div class="section">
+    <h2>Why SlotsWise?</h2>
+    <p>SlotsWise offers exclusive bonuses, top-rated slots, and the chance to win life-changing jackpots! Join thousands of winners today.</p>
+    <div class="brands">
+      <img src="brand1.png" alt="Brand 1">
+      <img src="brand2.png" alt="Brand 2">
+      <img src="brand3.png" alt="Brand 3">
+    </div>
   </div>
-</section>
 
-<div id="exit-modal">
-  <div class="modal-content">
-    <h2>WAIT! CLAIM YOUR BONUS NOW</h2>
-    <p>57,500 Gold Coins + 27.5 Sweepstakes Coins – Don’t miss out!</p>
-    <button onclick="window.location.href='https://convert.ctypy.com/aff_c?offer_id=29526&aff_id=21885'">CLAIM NOW</button>
+  <div class="cta">
+    <button onclick="window.location.href='https://convert.ctypy.com/aff_c?offer_id=29526&aff_id=21885'">Get Started Now</button>
   </div>
-</div>
 
-<a href="https://convert.ctypy.com/aff_c?offer_id=29526&aff_id=21885" class="sticky-cta">Claim Your Big Win</a>
+  <footer>
+    <p>&copy; 2026 SlotsWise - All Rights Reserved | <a href="#">Privacy Policy</a> | <a href="#">Terms & Conditions</a></p>
+  </footer>
 
-<script>
-  // Lazy Exit Pop
-  let exitShown = false;
-  document.addEventListener("mouseout", function(e) {
-    if(!exitShown && e.clientY < 0) {
-      document.getElementById("exit-modal").style.display = "flex";
-      exitShown = true;
-    }
-  });
-</script>
+  <!-- Exit Pop-Up -->
+  <div class="exit-popup" id="exit-popup">
+    <div class="popup-content">
+      <h3>Wait! Don't Leave Yet!</h3>
+      <p>Claim your bonus and start spinning to win massive jackpots!</p>
+      <button onclick="window.location.href='https://convert.ctypy.com/aff_c?offer_id=29526&aff_id=21885'">Claim My Bonus Now</button>
+    </div>
+  </div>
 
+  <script>
+    // Show exit popup when user attempts to leave
+    document.addEventListener("mouseout", function (e) {
+      if (!e.toElement && !e.relatedTarget) {
+        document.getElementById("exit-popup").style.display = "flex";
+      }
+    });
+  </script>
 </body>
 </html>
