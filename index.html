@@ -9,43 +9,42 @@
     <title>Congratulations! You Could Win a Million Dollars!</title>
     <style>
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Arial', sans-serif;
             text-align: center;
             margin: 0;
             padding: 0;
-            background: #000;
+            background-color: #000;
             color: #fff;
             overflow: hidden;
             position: relative;
         }
 
-        /* Sparkling effect on the headline */
+        /* Headline with sparkling effect */
         h1 {
-            font-size: 40px;
+            font-size: 50px;
             color: #FFD700;
             font-weight: bold;
             text-transform: uppercase;
-            animation: fireworks 2s infinite, rotateColors 5s infinite linear;
-            position: relative;
+            animation: sparkle 1.5s infinite alternate, colorChange 5s infinite linear;
             cursor: pointer;
-            padding-top: 50px;
+            margin-top: 20vh;
         }
 
-        @keyframes fireworks {
+        @keyframes sparkle {
             0% {
-                text-shadow: 0 0 5px #FFD700, 0 0 10px #FFD700, 0 0 15px #ff5733, 0 0 20px #ff1493, 0 0 25px #ff1493;
+                text-shadow: 0 0 5px #FFD700, 0 0 10px #FFD700, 0 0 20px #ff1493;
             }
 
             50% {
-                text-shadow: 0 0 5px #28a745, 0 0 10px #28a745, 0 0 15px #00bfff, 0 0 20px #00bfff, 0 0 25px #ff1493;
+                text-shadow: 0 0 5px #ff5733, 0 0 10px #ff5733, 0 0 20px #ff1493;
             }
 
             100% {
-                text-shadow: 0 0 5px #FFD700, 0 0 10px #FFD700, 0 0 15px #ff5733, 0 0 20px #ff1493, 0 0 25px #ff1493;
+                text-shadow: 0 0 5px #28a745, 0 0 10px #28a745, 0 0 20px #00bfff;
             }
         }
 
-        @keyframes rotateColors {
+        @keyframes colorChange {
             0% {
                 color: #FFD700;
             }
@@ -67,46 +66,52 @@
             }
         }
 
-        /* Floating coins or dollar bills */
-        .coin {
+        /* Floating Text for excitement */
+        .floating-text {
             position: absolute;
-            width: 50px;
-            height: 50px;
-            background-size: cover;
-            animation: float 6s infinite ease-in-out;
-            z-index: 1;
-            opacity: 0.9;
+            font-size: 40px;
+            font-weight: bold;
+            color: #fff;
+            animation: floatUp 6s infinite ease-in-out;
+            z-index: 0;
         }
 
-        @keyframes float {
+        @keyframes floatUp {
             0% {
-                transform: translateY(0) rotate(0);
+                transform: translateY(0) scale(1);
+                opacity: 1;
             }
 
             50% {
-                transform: translateY(-200px) rotate(180deg);
+                transform: translateY(-200px) scale(1.2);
+                opacity: 0.7;
             }
 
             100% {
-                transform: translateY(0) rotate(360deg);
+                transform: translateY(0) scale(1);
+                opacity: 1;
             }
         }
 
-        /* Button styling */
-        .claim-button {
-            margin-top: 30px;
+        /* Button Styling */
+        .cta-button {
             padding: 20px 40px;
             font-size: 24px;
+            background-color: #e91e63;
             color: #fff;
-            background-color: #ff1493;
             border: none;
-            border-radius: 8px;
+            border-radius: 10px;
             cursor: pointer;
-            box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3);
+            transition: background-color 0.3s;
+            margin-top: 30px;
         }
 
-        .claim-button:hover {
-            background-color: #ff4da6;
+        .cta-button:hover {
+            background-color: #ff4081;
+        }
+
+        .cta-button:active {
+            background-color: #d32f2f;
         }
 
     </style>
@@ -114,21 +119,27 @@
 
 <body>
 
-    <!-- Clickable headline -->
+    <!-- Sparkling Headline -->
     <h1 onclick="window.location.href='https://convert.ctypy.com/aff_c?offer_id=29526&aff_id=21885'">
-        Congratulations, You Could Win a Million Dollars!
+        Congratulations! You Could Win a Million Dollars!
     </h1>
 
-    <!-- Floating Coins Effect -->
-    <div class="coin" style="top: 100px; left: 20%; background: url('https://brightlane.github.io/SpinLabs/coin.png');"></div>
-    <div class="coin" style="top: 150px; left: 40%; background: url('https://brightlane.github.io/SpinLabs/coin.png');"></div>
-    <div class="coin" style="top: 200px; left: 60%; background: url('https://brightlane.github.io/SpinLabs/coin.png');"></div>
-    <div class="coin" style="top: 250px; left: 80%; background: url('https://brightlane.github.io/SpinLabs/coin.png');"></div>
-    <div class="coin" style="top: 300px; left: 30%; background: url('https://brightlane.github.io/SpinLabs/coin.png');"></div>
-    <div class="coin" style="top: 350px; left: 70%; background: url('https://brightlane.github.io/SpinLabs/coin.png');"></div>
+    <!-- Floating Money Words -->
+    <div class="floating-text" style="top: 10%; left: 10%; animation-duration: 8s;">
+        Win Big!
+    </div>
+    <div class="floating-text" style="top: 30%; left: 30%; animation-duration: 10s;">
+        Instant Cash!
+    </div>
+    <div class="floating-text" style="top: 60%; left: 50%; animation-duration: 12s;">
+        Jackpot!
+    </div>
+    <div class="floating-text" style="top: 50%; left: 70%; animation-duration: 6s;">
+        Don’t Miss Out!
+    </div>
 
-    <!-- Claim button -->
-    <button class="claim-button" onclick="claimJackpot()">Claim Your Jackpot Now!</button>
+    <!-- Claim Button -->
+    <button class="cta-button" onclick="claimJackpot()">Claim Your Jackpot Now!</button>
 
     <!-- Jackpot Sound -->
     <audio id="jackpot-sound" preload="auto">
