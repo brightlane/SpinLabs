@@ -3,14 +3,26 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="Claim your SlotsWise massive jackpot bonus! $1,000,000 in virtual wins and 57,500 gold coins waiting. Spin to win today!">
-<meta name="keywords" content="SlotsWise, online slots, slot bonuses, casino slots, jackpots, slot wins, free coins">
+<meta name="description" content="SlotsWise online slots – Claim massive jackpots and bonuses! $1,000,000 in virtual wins, plus 57,500 Gold Coins and 27.5 Sweepstakes Coins.">
+<meta name="keywords" content="SlotsWise, online slots, slot bonuses, jackpot wins, casino slots, free coins, sweepstakes, casino bonuses">
 <title>SlotsWise Mega Jackpot Bonus</title>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Offer",
+  "name": "SlotsWise Mega Jackpot Bonus",
+  "url": "https://convert.ctypy.com/aff_c?offer_id=29526&aff_id=21885",
+  "priceCurrency": "USD",
+  "price": "0.00",
+  "availability": "https://schema.org/InStock",
+  "description": "Claim your SlotsWise $1,000,000 jackpot bonus, 57,500 Gold Coins and 27.5 Sweepstakes Coins today!"
+}
+</script>
 <style>
   body {
     margin: 0;
     font-family: 'Arial', sans-serif;
-    background: linear-gradient(to bottom, #1a1a1a, #111);
+    background: linear-gradient(to bottom, #0a0a0a, #111);
     color: #fff;
     overflow-x: hidden;
   }
@@ -27,9 +39,9 @@
   }
 
   header a.logo {
-    font-size: 1.5rem;
+    font-size: 1.7rem;
     font-weight: bold;
-    color: #f59e0b;
+    color: #ffd700;
     text-decoration: none;
   }
 
@@ -44,55 +56,62 @@
 
   .hero {
     text-align: center;
-    padding: 80px 20px 40px 20px;
+    padding: 80px 20px 60px 20px;
     position: relative;
   }
 
   .jackpot {
-    font-size: 3rem;
+    font-size: 4rem;
     font-weight: bold;
     color: #ffd700;
-    text-shadow: 0 0 10px #fff, 0 0 20px #ffd700, 0 0 30px #ffae00;
-    animation: sparkle 1.5s infinite alternate;
-    margin-bottom: 20px;
+    text-shadow:
+      0 0 10px #fff,
+      0 0 20px #ffd700,
+      0 0 30px #ffae00,
+      0 0 40px #ffdd55,
+      0 0 50px #fff;
+    animation: sparkle 1s infinite alternate;
+    margin-bottom: 30px;
+    position: relative;
+    display: inline-block;
   }
 
   @keyframes sparkle {
-    0% { text-shadow: 0 0 10px #fff, 0 0 20px #ffd700, 0 0 30px #ffae00; }
-    50% { text-shadow: 0 0 20px #fff, 0 0 40px #ffd700, 0 0 60px #ffae00; }
-    100% { text-shadow: 0 0 10px #fff, 0 0 20px #ffd700, 0 0 30px #ffae00; }
+    0% { text-shadow: 0 0 10px #fff,0 0 20px #ffd700,0 0 30px #ffae00,0 0 40px #ffdd55,0 0 50px #fff; }
+    50% { text-shadow: 0 0 20px #fff,0 0 40px #ffd700,0 0 60px #ffae00,0 0 80px #ffdd55,0 0 100px #fff; }
+    100% { text-shadow: 0 0 10px #fff,0 0 20px #ffd700,0 0 30px #ffae00,0 0 40px #ffdd55,0 0 50px #fff; }
   }
 
-  .coins {
+  .sparkle-particles {
     position: absolute;
     width: 100%;
-    height: 300px;
-    top: 0;
+    height: 200px;
+    top: -50px;
     left: 0;
     pointer-events: none;
-    overflow: hidden;
+    overflow: visible;
   }
 
-  .coin {
+  .particle {
     position: absolute;
-    width: 20px;
-    height: 20px;
-    background: radial-gradient(circle at 30% 30%, #ff0, #ffa500);
+    width: 8px;
+    height: 8px;
+    background: radial-gradient(circle at 30% 30%, #fff, #ffd700);
     border-radius: 50%;
-    animation: fall linear infinite;
+    animation: particle-fall linear infinite;
   }
 
-  @keyframes fall {
-    0% { transform: translateY(-50px) rotate(0deg); opacity: 1; }
-    100% { transform: translateY(800px) rotate(360deg); opacity: 0; }
+  @keyframes particle-fall {
+    0% { transform: translateY(0) scale(1); opacity: 1; }
+    100% { transform: translateY(200px) scale(0.5); opacity: 0; }
   }
 
   .cta-hero {
     display: inline-block;
     background: #ff0000;
-    padding: 18px 36px;
+    padding: 20px 40px;
     border-radius: 12px;
-    font-size: 1.3rem;
+    font-size: 1.4rem;
     font-weight: bold;
     text-decoration: none;
     color: #fff;
@@ -104,6 +123,13 @@
     transform: scale(1.1);
   }
 
+  .bonus-section {
+    text-align: center;
+    margin: 40px 20px;
+    font-size: 1.3rem;
+    color: #ffd700;
+  }
+
   .brands {
     text-align: center;
     margin: 50px 0;
@@ -113,13 +139,6 @@
     margin: 15px;
     max-width: 120px;
     filter: brightness(1.2);
-  }
-
-  .bonus-section {
-    text-align: center;
-    margin: 50px 20px;
-    font-size: 1.2rem;
-    color: #ffd700;
   }
 
   .footer {
@@ -138,7 +157,7 @@
 </header>
 
 <section class="hero">
-  <div class="coins" id="coins-container"></div>
+  <div class="sparkle-particles" id="particles-container"></div>
   <div class="jackpot">$1,000,000 JACKPOT!</div>
   <a href="https://convert.ctypy.com/aff_c?offer_id=29526&aff_id=21885" class="cta-hero">Claim Your Bonus Now!</a>
 </section>
@@ -148,7 +167,7 @@
 </section>
 
 <section class="brands">
-  <h2>Top Slots Brands You Can Trust</h2>
+  <h2>Trusted Online Slot Brands</h2>
   <img src="https://via.placeholder.com/120x60?text=Brand1" alt="Brand1">
   <img src="https://via.placeholder.com/120x60?text=Brand2" alt="Brand2">
   <img src="https://via.placeholder.com/120x60?text=Brand3" alt="Brand3">
@@ -160,15 +179,15 @@
 </footer>
 
 <script>
-// Generate falling coins
-const coinsContainer = document.getElementById('coins-container');
-for (let i = 0; i < 30; i++) {
-  const coin = document.createElement('div');
-  coin.classList.add('coin');
-  coin.style.left = Math.random() * window.innerWidth + 'px';
-  coin.style.animationDuration = 2 + Math.random() * 3 + 's';
-  coin.style.width = coin.style.height = 15 + Math.random() * 15 + 'px';
-  coinsContainer.appendChild(coin);
+// Sparkle Particles
+const container = document.getElementById('particles-container');
+for (let i = 0; i < 40; i++) {
+  const particle = document.createElement('div');
+  particle.classList.add('particle');
+  particle.style.left = Math.random() * window.innerWidth + 'px';
+  particle.style.animationDuration = (1 + Math.random() * 2) + 's';
+  particle.style.width = particle.style.height = 5 + Math.random() * 8 + 'px';
+  container.appendChild(particle);
 }
 </script>
 
