@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Huge jackpot bonuses, win big on slots today!">
+  <meta name="description" content="Claim your jackpot now with huge slot bonuses and massive wins!">
   <title>SpinLabs - Jackpot Winning Slots</title>
   <style>
     body {
@@ -12,6 +12,7 @@
       color: #fff;
       margin: 0;
       padding: 0;
+      overflow-x: hidden;
     }
 
     /* Hero Section */
@@ -61,18 +62,36 @@
       background-color: #ffba00;
     }
 
+    /* Slot Machine Animation */
     .slot-machine {
       width: 120px;
       height: 120px;
-      margin: 20px;
+      position: absolute;
+      animation: fall 10s linear infinite;
       cursor: pointer;
-      transition: transform 0.3s ease;
+    }
+
+    /* Falling Animation */
+    @keyframes fall {
+      0% {
+        top: -150px;
+        opacity: 1;
+      }
+      50% {
+        top: 60%;
+        opacity: 0.8;
+      }
+      100% {
+        top: 100vh;
+        opacity: 0;
+      }
     }
 
     .slot-machine:hover {
       transform: scale(1.1);
     }
 
+    /* Urgent Message */
     .urgent-message {
       display: none;
       font-size: 1.2rem;
@@ -112,10 +131,13 @@
         transform: scale(1);
       }
     }
-
   </style>
 </head>
 <body>
+
+  <!-- Jackpot Sound -->
+  <audio id="jackpot-sound" src="jackpot.mp3" preload="auto"></audio>
+
   <section class="hero">
     <h1>
       <a href="https://convert.ctypy.com/aff_c?offer_id=29526&aff_id=21885" style="text-decoration: none; color: inherit;">
@@ -127,20 +149,18 @@
       Get Started Now
     </a>
 
-    <!-- Slot Machines -->
-    <div class="slot-machines">
-      <a href="https://convert.ctypy.com/aff_c?offer_id=29526&aff_id=21885">
-        <img src="slot-machine1.png" alt="Slot Machine 1" class="slot-machine">
-      </a>
-      <a href="https://convert.ctypy.com/aff_c?offer_id=29526&aff_id=21885">
-        <img src="slot-machine2.png" alt="Slot Machine 2" class="slot-machine">
-      </a>
-      <a href="https://convert.ctypy.com/aff_c?offer_id=29526&aff_id=21885">
-        <img src="slot-machine3.png" alt="Slot Machine 3" class="slot-machine">
-      </a>
-    </div>
+    <!-- Slot Machines Falling -->
+    <a href="https://convert.ctypy.com/aff_c?offer_id=29526&aff_id=21885">
+      <img src="slot-machine1.png" alt="Slot Machine 1" class="slot-machine" style="left: 10%; animation-delay: 0s;">
+    </a>
+    <a href="https://convert.ctypy.com/aff_c?offer_id=29526&aff_id=21885">
+      <img src="slot-machine2.png" alt="Slot Machine 2" class="slot-machine" style="left: 50%; animation-delay: 3s;">
+    </a>
+    <a href="https://convert.ctypy.com/aff_c?offer_id=29526&aff_id=21885">
+      <img src="slot-machine3.png" alt="Slot Machine 3" class="slot-machine" style="left: 90%; animation-delay: 6s;">
+    </a>
 
-    <!-- Urgent Message (Will appear after a delay) -->
+    <!-- Urgent Message (Appears after delay) -->
     <div id="urgent-message" class="urgent-message">
       Don't leave the million dollars on the table! Act fast before it's too late.
       <br>
@@ -151,10 +171,17 @@
   </section>
 
   <script>
+    // Play Jackpot Sound when the page loads
+    window.onload = function() {
+      var jackpotSound = document.getElementById("jackpot-sound");
+      jackpotSound.play();
+    };
+
     // Show urgent message after a 10-second delay
     setTimeout(function() {
       document.getElementById('urgent-message').style.display = 'block';
     }, 10000); // 10 seconds delay
   </script>
+
 </body>
 </html>
