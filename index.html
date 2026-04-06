@@ -18,10 +18,10 @@
         }
 
         h1 {
-            font-size: 50px;
+            font-size: 37.5px; /* Reduced size by 25% */
             color: #FFD700;
             font-weight: bold;
-            animation: sparkle 1s infinite alternate;
+            animation: sparkle 1s infinite alternate, rotateColors 5s infinite linear;
         }
 
         @keyframes sparkle {
@@ -35,6 +35,28 @@
 
             100% {
                 color: #28a745;
+            }
+        }
+
+        @keyframes rotateColors {
+            0% {
+                color: #FFD700;
+            }
+
+            25% {
+                color: #ff5733;
+            }
+
+            50% {
+                color: #28a745;
+            }
+
+            75% {
+                color: #00bfff;
+            }
+
+            100% {
+                color: #ff1493;
             }
         }
 
@@ -108,9 +130,18 @@
         Claim Your Jackpot Now!
     </button>
 
+    <!-- Jackpot Sound -->
+    <audio id="jackpot-sound" preload="auto">
+        <source src="https://www.soundjay.com/button/beep-07.wav" type="audio/wav">
+        Your browser does not support the audio tag.
+    </audio>
+
     <script>
-        // Optional: You can later add the jackpot sound functionality here.
-        // Example: document.querySelector(".cta-button").addEventListener("click", function () { /* Play Sound */ });
+        // Play jackpot sound when clicking "Claim Your Jackpot Now"
+        document.querySelector(".cta-button").addEventListener("click", function () {
+            var sound = document.getElementById("jackpot-sound");
+            sound.play();
+        });
     </script>
 
 </body>
